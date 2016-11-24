@@ -21,7 +21,7 @@
                         box-sizing:border-box; margin-right: 10px;
                         float: left; position: relative; display: inline-block; height: 59px;
                         a{
-                            display: block; height: 60px; line-height: 62px; padding:  0 20px; font-size:17px; color: #4e555c;
+                            display: block; height: 60px; line-height: 60px; padding:  0 20px; font-size:17px; color: #4e555c;
                         }
                         &.cur{
                             border-bottom: solid 2px #4285f4;
@@ -38,6 +38,30 @@
             }
         }
 
+    }
+}
+.sub_nav {
+    border: none;
+    box-shadow: none;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    ul {
+        font-size: 0;
+        background: #fff;
+        padding-left: 200px;
+        li {
+            display: inline-block;
+            font-size: 16px;
+            margin: 0 20px;
+            a {
+                box-sizing: border-box;
+                display: inline-block;
+                height: 60px;
+                line-height: 60px;
+                color: #3e85ff;
+            }
+        }
     }
 }
 
