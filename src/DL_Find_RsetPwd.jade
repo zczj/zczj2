@@ -1,0 +1,62 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/login.min.css")
+    .bg_white.bg_login
+            .page_warp
+                .login_form.cf.bindAcc
+                    //左侧 505
+                    .login_main
+                        .login_t 找回密码
+                        .login_con
+                            //普通登录
+                            form(action="https://www.zczj.com")#find_pwd.zj_form.zj_form_1
+                                ul.tab_login_box(style="margin-top:30px;")
+                                    li.find_step.step_2
+                                        img(src="skin/img/step2.png", alt="")
+                                    li(style="margin-top:30px;")
+                                        input(type="button",value="重新发送验证码",style="font-size:16px;").login_btn.zx_btn
+                                    li(style="margin-top:30px;")
+                                        i.zczj.icon_pwd
+                                        input.txt(type="password" placeholder="输入验证码" name="pt_Code")
+                                    li(style="margin-top:30px;")
+                                        i.zczj.icon_pwd
+                                        input.txt(type="password" placeholder="输入新密码" name="pt_pwd")
+                                    li.f_red.login_error.mt30 错误提示
+                                    li.login_bnt_li(style="margin-top:10px;")
+                                        input(type="submit" value="下一步").login_btn.zx_btn
+
+
+
+     script(src="skin/js/jquery.validate.min.js")
+    script.
+        $(function(){
+            $('#find_pwd').validate({
+                rules:{
+                    pt_Code:{
+                        required:true,
+                        minlength:4
+                    },
+                    pt_pwd:{
+                        required:true,
+                        minlength:6
+                    }
+                },
+                messages:{
+                    pt_Code:{
+                        required: '输入验证码',
+                        minlength:'验证码最小4位'
+                    },
+                    pt_pwd:{
+                        required: '请输入新密码',
+                        minlength:'新密码最小6位'
+                    }
+                },
+                submitHandler: function(form){
+                    dialog.isOk('form提交中。。。')
+                    form.submit();
+                }
+            })
+        })
+
+
+    include Shade/footer

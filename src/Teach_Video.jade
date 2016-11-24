@@ -1,0 +1,327 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/plugs/mCustomScrollbar/demo_files/jquery.mCustomScrollbar.css")
+    link(rel="stylesheet", href="skin/css/teach.min.css")
+    link(rel="stylesheet", href="skin/plugs/comment/css/comment.css")
+
+    .bg_black
+        .crumb
+            .zj-container
+                a(href="#") 首页
+                |>
+                a(href="#") 众筹学院
+                |>
+                span 活动视频
+        .zj-container.video_container
+            .video_box
+
+                script(src="skin/plugs/player/sewise.player.min.js")
+                script.
+                    SewisePlayer.setup({
+                        server: "vod",
+                        type: "m3u8",
+                        videourl: "http://zczjoutvideo.oss-cn-hangzhou.aliyuncs.com/video/s001-xue.m3u8",
+                        skin: "vodFlowPlayer",
+                        title: "众筹大课堂第一集",
+                        lang: 'zh_CN',
+                        buffer:5,
+                        claritybutton:"disable"
+                    });
+            .video_mune_side
+                a(href="#").zx_btn_openSide
+                .video_mune
+                    a.mune_list(href="#").cur 众筹大课堂第一集
+                    a.mune_list(href="#") 众筹大课堂第二集
+                    a.mune_list(href="#") 众筹大课堂第三集
+                    a.mune_list(href="#") 众筹大课堂第四集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+                    a.mune_list(href="#") 众筹大课堂第x集
+    .bg_white
+        .zj-container.mb40.cf
+            //左侧 片段简介
+            .teach_main.l
+                .teach_main_box.teach_video_info
+                    .info_t 片段简介
+                    .info_cn
+                        p.
+                            开始火热的众筹是否会带来下一轮的互联网金融机会？对于所有想要参与众筹的投资者而言，在投资之前有一些问题是你不得不知道的。
+
+                        p.
+                            　　问题一：
+
+                        p.
+                            　　众筹有哪些种类？国内众筹主要有四种模式：股权众筹、服务众筹、产品众筹、公益众筹。很多知名众筹网站其实都是做非股权众筹的，这种模式中参与者花钱购买的并非是公司股权，而是一个产品期权。国内众汇赢做主要业务方向就是产品预售。股权众筹的基本模式就是在互联网上兜售股份，募集资金，一般股权众筹的流程是：创业
+
+                        p.
+                            　　者在众筹平台上发布自己的创业项目——投资人通过平台投资项目并获取股权——投资人取得回报。
+
+                        p.
+                            　　问题二：
+
+                        p.
+                            　　众筹的门槛如何？产品预售的门槛相对较低。一般一个产品的价格从几十元到几百元，相当于是缴纳产品的预付款。只要您对产品感兴趣，就可以投上一笔资金，接下来就是等待产品完成之后寄送到你的手中了。而股权众筹则不同。为了确保投资人有相应的风险承受能力，平台一般都会对投资人设置一些门槛。由于众筹的模式中会由多个小额分散的投资人投资一个项目，要创业者一一接受所有投资者的咨询和调查，将耗费大量的精力。所以众筹网站往往会实行“领投+跟投”的制度。
+
+                        p.
+                            　　问题三：
+
+                        p.
+                            　　众筹的回报如何参与产品众筹，你能够以低于市价购入一项创意类产品。而更多人感兴趣的不仅仅是产品，这里面有支柱和投资的成分，他们非常期待跟创业者一起完成一件事。这是产品众筹与电商平台最大的不同——参与感。而股权众筹则是非常令人着迷的模式，因为它有点类似于投资一家未上市公司，从而带来巨大的回报，也可能亏得分文不剩。“跟一般的天使投资一样，众筹可能产生非常大的收益，但是投资者也必须做好可能血本无归的准备。这也决定了股权众筹的规模不可能有p2p网贷那么大，但它可以作为资产配置的重要一环。
+                //留言 老苏高速版
+                .teach_main_box.teach_comment
+                    #comment
+                        .comment_head.
+                            网友评论
+                            <span>（已有5条评论）</span>
+                        .comment_post_txt
+                            .comment_post_t
+                                //- i.icon.icon_bi
+                                textarea(name="saytext_0",placeholder="写评论")#saytext_0.input
+                                .comment_post_btn
+                                    i.icon.icon_face.emotion
+                                    a(href="#").btn.btn_comment 评论
+                        .comment_list.comment_hot
+                            .comment_list_t 以下为精彩评论
+                            .com_li
+                                span.author
+                                    img(src="http://img.zczj.com//avatar/20160624/2016062410090932845669.jpg", alt="")
+                                p.com_title.
+                                    <span class="com_user">SatisfyMe</span>：文章观点深刻，我深表认同！
+                                ul.com_replay_list
+                                    li.
+                                        <span class="com_user">@SatisfyMe</span>
+                                        文章观点深刻，我深表认同！
+                                    li.
+                                        <span class="com_user">@SatisfyMe</span>
+                                        文章观点深刻，我深表认同！
+
+                                p.com_tools
+
+                                    span.com_zan
+                                        span.com_jb 举报
+                                        span
+                                            i.icon.icon_com_zan
+                                            |（30）
+                                        ||
+                                        span.comment_replay 评论
+
+                                    span.com_data 8月24日 10:09
+                                .comment_post_txt.comment_list_replay
+                                    .comment_post_t
+                                        //- i.icon.icon_bi
+                                        textarea(name="saytext_1",placeholder="写评论")#saytext_1.input
+                                        .comment_post_btn
+                                            i.icon.icon_face.emotion
+                                            a(href="#").btn.btn_comment 评论
+                            .com_li
+                                span.author
+                                    img(src="http://img.zczj.com//avatar/20160624/2016062410090932845669.jpg", alt="")
+                                p.com_title.
+                                    <span class="com_user">SatisfyMe</span>：文章观点深刻，我深表认同！
+                                ul.com_replay_list
+                                    li.
+                                        <span class="com_user">@SatisfyMe</span>
+                                        文章观点深刻，我深表认同！
+                                    li.
+                                        <span class="com_user">@SatisfyMe</span>
+                                        文章观点深刻，我深表认同！
+
+                                p.com_tools
+
+                                    span.com_zan
+                                        span.com_jb 举报
+                                        span
+                                            i.icon.icon_com_zan
+                                            |（30）
+                                        ||
+                                        span.comment_replay 评论
+
+                                    span.com_data 8月24日 10:09
+                                .comment_post_txt.comment_list_replay
+                                    .comment_post_t
+                                        //- i.icon.icon_bi
+                                        textarea(name="saytext_2",placeholder="写评论")#saytext_2.input
+                                        .comment_post_btn
+                                            i.icon.icon_face.emotion
+                                            a(href="#").btn.btn_comment 评论
+                        .comment_list.comment_new
+                            .comment_list_t 以下为最新评论
+                            .com_li
+                                span.author
+                                    img(src="http://img.zczj.com//avatar/20160624/2016062410090932845669.jpg", alt="")
+                                p.com_title.
+                                    <span class="com_user">SatisfyMe</span>：文章观点深刻，我深表认同！
+                                ul.com_replay_list
+                                    li.
+                                        <span class="com_user">@SatisfyMe</span>
+                                        文章观点深刻，我深表认同！
+                                    li.
+                                        <span class="com_user">@SatisfyMe</span>
+                                        文章观点深刻，我深表认同！
+
+                                p.com_tools
+
+                                    span.com_zan
+                                        span.com_jb 举报
+                                        span
+                                            i.icon.icon_com_zan
+                                            |（30）
+                                        ||
+                                        span.comment_replay 评论
+
+                                    span.com_data 8月24日 10:09
+                                .comment_post_txt.comment_list_replay
+                                    .comment_post_t
+                                        //- i.icon.icon_bi
+                                        textarea(name="saytext_3",placeholder="写评论")#saytext_3.input
+                                        .comment_post_btn
+                                            i.icon.icon_face.emotion
+                                            a(href="#").btn.btn_comment 评论
+                            .com_li
+                                span.author
+                                    img(src="http://img.zczj.com//avatar/20160624/2016062410090932845669.jpg", alt="")
+                                p.com_title.
+                                    <span class="com_user">SatisfyMe</span>：文章观点深刻，我深表认同！
+                                ul.com_replay_list
+                                    li.
+                                        <span class="com_user">@SatisfyMe</span>
+                                        文章观点深刻，我深表认同！
+                                    li.
+                                        <span class="com_user">@SatisfyMe</span>
+                                        文章观点深刻，我深表认同！
+
+                                p.com_tools
+
+                                    span.com_zan
+                                        span.com_jb 举报
+                                        span
+                                            i.icon.icon_com_zan
+                                            |（30）
+                                        ||
+                                        span.comment_replay 评论
+
+                                    span.com_data 8月24日 10:09
+                                .comment_post_txt.comment_list_replay
+                                    .comment_post_t
+                                        //- i.icon.icon_bi
+                                        textarea(name="saytext_4",placeholder="写评论")#saytext_4.input
+                                        .comment_post_btn
+                                            i.icon.icon_face.emotion
+                                            a(href="#").btn.btn_comment 评论
+
+
+
+            //右侧 294
+            .teach_side.r
+                .teach_side_box.mt30
+                    .teach_side_t 视频列表
+                    .con
+                        .video_play_box(href="#")
+                            img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+                            .mask_layer
+                            span.video_tag 直播
+                            a.zx_btn.play_btn(href="#")
+
+                        .video_play_box(href="#")
+                            img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+                            .mask_layer
+                            span.video_tag 直播
+                            a.zx_btn.play_btn(href="#")
+
+                        .video_play_box(href="#")
+                            img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+                            .mask_layer
+                            span.video_tag 直播
+                            a.zx_btn.play_btn(href="#")
+
+                        .video_play_box(href="#")
+                            img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+                            .mask_layer
+                            span.video_tag 直播
+                            a.zx_btn.play_btn(href="#")
+                        .t_center.mt30.
+                            <a href="#" class="zx_btn btn_blue">查看更多</a>
+
+
+
+
+
+
+    include Shade/footer
+    //-
+        /player/sewise.player.min.js?server=vod&type=m3u8&videourl=http://zczjoutvideo.oss-cn-hangzhou.aliyuncs.com/video/s001-xue.m3u8&autostart=true&starttime=0&lang=zh_CN&title=众筹大课堂第一集&buffer=5&claritybutton=disable&skin=vodFlowPlayer
+        script(src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js")
+    script(src="skin/plugs/comment/js/jquery.qqFace.js")
+    script(src="skin/plugs/comment/js/jquery-browser.js")
+    script(src="skin/plugs/comment/js/comment.js")
+
+
+    script(src="skin/plugs/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js")
+
+    script.
+        ;(function(){
+            $('.video_mune').mCustomScrollbar({
+                scrollButtons:{
+                    enable:true
+                }
+            })
+        })();
+        $(function(){
+            $('.emotion').each(function(i,el){
+                $(el).qqFace({
+                    id : 'facebox_'+i,
+                    assign:'saytext_'+i,
+                    path:'skin/plugs/comment/arclist/' //表情存放的路径
+                })
+            })
+            //- $('.emotion').qqFace({
+            //-     id : 'facebox',
+            //-     assign:'saytext',
+            //-     path:'skin/js/comment/arclist/' //表情存放的路径
+            //- });
+            $(".btn_comment").click(function(){
+                //- var str = $("#saytext").val();
+                //- $("#show").html(replace_em(str));
+            });
+            //查看结果
+            function replace_em(str){
+                str = str.replace(/\</g,'&lt;');
+                str = str.replace(/\>/g,'&gt;');
+                str = str.replace(/\n/g,'<br/>');
+                str = str.replace(/\[em_([0-9]*)\]/g,'<img src="skin/plugs/comment/arclist/$1.gif" border="0" />');
+                return str;
+            }
+        })
+        ;(function(){
+            $(function () {
+                $('.zx_btn_openSide').click(function () {
+                    if ($(this).hasClass('open')) {
+                        $(this).removeClass('open')
+                        $('.video_mune_side').animate({
+                            'width':40+'px'
+                        },200)
+                    }else{
+                        $(this).addClass('open');
+                        $('.video_mune_side').animate({
+                            'width':300+'px'
+                        },200)
+                    }
+                })
+            })
+        })();
+

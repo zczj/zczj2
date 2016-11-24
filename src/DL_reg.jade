@@ -1,0 +1,115 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/login.min.css")
+    .bg_white.bg_login
+            .page_warp
+                .login_form.cf
+                    //左侧 505
+                    .login_main.l
+                        .login_t 注册
+                        .login_con
+                            form(action="http://www.baidu.com")#regForm.zj_form
+                                ul.reg_box
+                                    li
+                                        span.login_name 手机
+                                        .login_val
+                                            input(type="password",name="mobile").txt
+                                    li
+                                        span.login_name 密码
+                                        .login_val
+                                            input(type="password",name="password").txt#password
+                                    li
+                                        span.login_name 确认密码
+                                        .login_val
+                                            input(type="password",name="confirm_password").txt
+                                    li
+                                        span.login_name 验证码
+                                        .login_val.imgcode
+                                            input(type="text",name="checkCode").txt.sort_txt
+                                            img(src="skin/img/code.jpg", alt="")
+                                            i.zczj.icon_blsh
+                                    li.note
+                                        span.login_name
+                                        .login_val
+                                            label
+                                                input(type="checkbox" name="agree")
+                                                |我已经阅读并接受
+                                                a(href="#") 《众筹之家服务条款》
+                                    li.f_red.login_error
+                                        span.login_name
+                                        .login_val 错误提示
+                                    li.btn
+                                        span.login_name
+                                        .login_val
+
+                                            input.login_btn.zx_btn(type="submit", value="注册")
+                                    li.login_tips
+                                        span.login_name
+                                        .login_val
+                                            |已注册账号，
+                                            a(href="DL_login.html") 直接登录
+
+
+
+
+                    //右侧
+                    .login_side.r
+                        .login_t 微信扫码注册
+                        .login_con
+                            .weixin-code.
+                                <iframe src="https://open.weixin.qq.com/connect/qrconnect?appid=wx915442a7ea8b3dc6&amp;scope=snsapi_login&amp;redirect_uri=https%3a%2f%2fwww.venture-shares.com%2fweixin%2fdoLogin.html&amp;state=&amp;login_type=jssdk&amp;style=black&amp;href=https://dn-vs-style.qbox.me/weixinregister.da8c89.css" frameborder="0" scrolling="no" width="266px" height="274px"></iframe>
+
+    script(src="skin/js/jquery.validate.min.js")
+    script.
+        $(function(){
+            $('#regForm').validate({
+                //- debug:true,
+                rules:{
+                    mobile: "required",
+                    password: {
+                        required: true,
+                        minlength: 6
+                    },
+                    confirm_password:{
+                        required: true,
+                        minlength: 6,
+                        equalTo:'#password'
+                    },
+                    checkCode:{
+                        required: true
+                    },
+                    agree: {
+                        required: true
+                    }
+                },
+                messages:{
+                    mobile: "请输入您的手机",
+                    password: {
+                        required: '请输入密码',
+                        minlength: '密码最小6位'
+                    },
+                    confirm_password:{
+                        required: '请输入密码',
+                        minlength: '密码最小6位',
+                        equalTo: "两次密码输入不一致"
+                    },
+                    checkCode: {
+                        required: '请输入验证码'
+                    },
+                    agree: {
+                        required: '请阅读《众筹之家服务条款》'
+                    }
+                },
+                submitHandler: function(form){
+                    dialog.isOk('form提交中。。。')
+                    form.submit();
+                }
+            })
+        })
+
+
+
+
+
+
+    include Shade/footer

@@ -1,0 +1,144 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/zixun.min.css")
+    link(rel="stylesheet", href="skin/css/user.min.css")
+    .page_warp
+        .container.mt40.cf
+            //右侧
+            .user_side.l
+                include Shade/user_side.jade
+            //左侧
+            .user_main.r
+                .collect_tab.btn_tab
+                    a(href="#").cur 收藏的文章
+                    a(href="#") 收藏的平台
+
+                //收藏的文章
+                .collect_box.box_tab.collect_articl(style="display:block;")
+                    .articl_select_box
+                        .select_bar.cf
+                            .l 文章类型：
+                                select.txt
+                                    option(value="0") 0
+                                    option(value="1") 1
+                                    option(value="2") 2
+                                    option(value="3") 3
+                            .r
+                                span 时间：
+                                input.txt(type="text",onFocus="WdatePicker()")
+                                |至
+                                input.txt(type="text",onFocus="WdatePicker()")
+                                a.btn.btn_sure 确定
+                                a.btn 清除筛选
+                        table.articl_list
+                            tr
+                                th(width="300") 文章标题
+                                th 文章类型
+                                th 收藏时间
+                                th 操作
+                            tr
+                                td
+                                    a(href="#").title 别让国足的"虽败犹荣"大标题蒙蔽双眼…
+                                td 众筹
+                                td 2016-09-02  11:17
+                                td
+                                    a(href="#").btn 查看
+                                    a(href="#").btn 移除
+                            tr
+                                td
+                                    a(href="#").title 别让国足的"虽败犹荣"大标题蒙蔽双眼…
+                                td 众筹
+                                td 2016-09-02  11:17
+                                td
+                                    a(href="#").btn 查看
+                                    a(href="#").btn 移除
+                             tr
+                                td
+                                    a(href="#").title 别让国足的"虽败犹荣"大标题蒙蔽双眼…
+                                td 众筹
+                                td 2016-09-02  11:17
+                                td
+                                    a(href="#").btn 查看
+                                    a(href="#").btn 移除
+
+                        //翻页
+                        <div class="black2"><span class="sp-cur">1</span><a href="#"><span>2</span></a><a href="#"><span>3</span></a><a href="#"><span>4</span></a><a href="#"><span>5</span></a><a href="#"><span>6</span></a><a href="#"><span>7</span></a><a href="#"><span>8</span></a><a href="#"><span>9</span></a><a href="#)"><span>10</span></a><a href="#">»</a></div>
+
+                .collect_box.box_tab.collect_pt
+                    ul.collect_pt
+                        li
+                            span.pt_name 平台类型：
+                            a(href="#").cur 全部
+                            a(href="#") 股权众筹
+                            a(href="#") 股权众筹
+                            a(href="#") 股权众筹
+
+                        li
+                            span.pt_name 专注领域：
+                            a(href="#").cur 全部
+                            a(href="#") 股权众筹
+                            a(href="#") 股权众筹
+                            a(href="#") 股权众筹
+                        li
+                            span.pt_name 所属地区：
+                            a(href="#").cur 全部
+                            a(href="#") 股权众筹
+                            a(href="#") 股权众筹
+                            a(href="#") 股权众筹
+                    table.collect_pt_list
+                        thead
+                            tr
+                                th(width="150") 名称
+                                th 类型
+                                th 地区
+                                th 领域
+                                th 创始人
+                                th 上线时间
+                                th 操作
+                            tr
+                                td
+                                    span.pt_name 天使客
+                                    p.dec 深圳市安奇克拉投资有限公司
+                                td 股权众筹
+                                td 深圳
+                                td  互联网
+                                td 石俊
+                                td 2015
+                                td
+
+                                    a(href="#").btn 查看
+                                    a(href="#").btn 取消收藏
+                            tr
+                                td
+                                    span.pt_name 天使客
+                                    p.dec 深圳市安奇克拉投资有限公司
+                                td 股权众筹
+                                td 深圳
+                                td  互联网
+                                td 石俊
+                                td 2015
+                                td
+
+                                    a(href="#").btn 查看
+                                    a(href="#").btn 取消收藏
+                            tr
+                                td
+                                    span.pt_name 天使客
+                                    p.dec 深圳市安奇克拉投资有限公司
+                                td 股权众筹
+                                td 深圳
+                                td  互联网
+                                td 石俊
+                                td 2015
+                                td
+
+                                    a(href="#").btn 查看
+                                    a(href="#").btn 取消收藏
+
+                    //翻页
+                    <div class="black2"><span class="sp-cur">1</span><a href="#"><span>2</span></a><a href="#"><span>3</span></a><a href="#"><span>4</span></a><a href="#"><span>5</span></a><a href="#"><span>6</span></a><a href="#"><span>7</span></a><a href="#"><span>8</span></a><a href="#"><span>9</span></a><a href="#)"><span>10</span></a><a href="#">»</a></div>
+    script(src="skin/plugs/My97DatePicker/WdatePicker.js")
+
+
+
+

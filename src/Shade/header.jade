@@ -1,0 +1,86 @@
+header.zj-header
+    .zj-container
+        .zj-nav.cf
+            a(href="#").logo
+                img(src="skin/img/logo.png")
+            nav
+                ul
+                    li.cur
+                        a(href='#') 首页
+                    li
+                        a(href='#') 资讯
+                    li
+                        a(href='#') 原创
+                    li
+                        a(href='#') 导航
+                    li
+                        a(href='#') 项目
+                    li
+                        a(href='#') 学院
+                    li
+                        a(href='#') 论坛
+                ul.nav_sub
+
+                    li
+                        a(href="#") 原创观点
+                    li
+                        a(href="#") 最新直播
+                    li
+                        a(href="#") 注册送壕礼
+                    li
+                        a(href="#") P2P新郑专题
+            .zj-login.r.
+                <ul class="sub-nav">
+                <li class="search-item">
+                <a data-stat-hover="sousuo" href="javascript:void(0)"><i class="zczj icon-fdj"></i> </a>
+                <div class="search-wrap pop-up">
+                <div class="search">
+                <form id="form_Search" method="post" action="" target="_blank">
+                <input type="hidden" id="hdTopSearchType">
+                <input name="poster" type="hidden">
+                <input name="keyword" type="hidden">
+                <input class="fl search-input" type="search" name="txtSearchKeyWord" id="txtSearchKeyWord">
+                <button class="fr search-btn zczj icon-fdj" type="button" onclick="Top_CheckSearch()"></button>
+                </form>
+                </div>
+                </div>
+                </li>
+                <li class="app-download" style="display:block">
+                <a data-stat-hover="kehuduan"><i class="zczj icon-mobile"></i> </a>
+                <div class="mobile-wrap pop-up">
+                <img alt="" src="https://www.zczj.com/skin/images/downApp/ma.png" width="90" height="90" class="qr">
+                <p class="mobile-text">iPhone & Android</p>
+                <div class="btns" style="display:none;">
+                <span>客户端下载</span>
+                <a data-stat-click="android" href="http://soa.zczj.com/apk/zczj_2016_06_29.apk"><i class="headericon-android"></i> Android</a>
+                <div style=" padding: 5px 0 0; font-size:14px; color: #808080;">
+                <p>海量股权众筹项目</p>
+                <p>随时随地由你选择</p>
+                </div>
+                </div>
+                </div>
+                </li>
+                <li id="head_show" class="login-actions">
+                    <!--
+                    <span class="login_btn_head">
+                    <a class="login-link J_login" href="javascript:LoginMon();">登录</a>|<a href="/passport/reg">注册</a>
+                    </span>-->
+                    <a href="/mycenter" class="head-avatar">
+                        <img src="http://img.zczj.com/avatar/nophoto.jpg" alt=""><i>5</i>
+                    </a>
+                    <div class="menu-wrap pop-up">
+                        <a class="brief" href="/mycenter"><img src="http://img.zczj.com/avatar/nophoto.jpg" alt=""><span>ozjo1030767</span></a>
+                        <div class="menu">
+                            <a href="/mycenter/index">我的帐户</a>
+                            <a href="/mycenter/mytransactions">我的交易</a>
+                            <a href="/MyCenter/pledgebaolist">我的质押</a>
+                            <a href="/mycenter/mybook">我的帐本</a>
+                            <a href="/cal">收益计算器</a>
+                            <a href="/mycenter/authentication">认证跟投人</a>
+                            <a href="/mycenter/seccenter">安全中心</a>
+                            <a href="/my/sendmessage">消息中心 <span class="fr"><i></i>5条未读</span></a>
+                            <a href="javascript:;LoginOutMon();">退出</a>
+                        </div>
+                    </div>
+                </li>
+                </ul>

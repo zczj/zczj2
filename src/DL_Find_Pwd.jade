@@ -1,0 +1,46 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/login.min.css")
+    .bg_white.bg_login
+            .page_warp
+                .login_form.cf.bindAcc
+                    //左侧 505
+                    .login_main
+                        .login_t 找回密码
+                        .login_con
+                            //普通登录
+                            form(action="https://www.zczj.com")#find_pwd.zj_form.zj_form_1
+                                ul.tab_login_box(style="margin-top:30px;")
+                                    li.find_step.step_1
+                                        img(src="skin/img/step1.png", alt="")
+                                    li(style="margin-top:50px;")
+                                        i.zczj.icon_person
+                                        input.txt(type="text" placeholder="手机号/邮箱" name="pt_phone")
+                                    li.login_bnt_li(style="margin-top:30px;")
+                                        input(type="submit" value="下一步").login_btn.zx_btn
+
+
+
+     script(src="skin/js/jquery.validate.min.js")
+    script.
+        $(function(){
+            $('#find_pwd').validate({
+                rules:{
+                    pt_phone:{
+                        required:true,
+                    }
+                },
+                messages:{
+                    pt_phone:{
+                        required: '请输入手机号或邮箱'
+                    }
+                },
+                submitHandler: function(form){
+                    dialog.isOk('form提交中。。。')
+                    form.submit();
+                }
+            })
+        })
+
+
+    include Shade/footer

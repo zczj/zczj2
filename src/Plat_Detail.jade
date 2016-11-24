@@ -1,0 +1,164 @@
+﻿extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/zixun.min.css")
+    link(rel="stylesheet", href="skin/css/plat.min.css")
+    .bg_gray
+        .page_warp.cf.mb40
+            //平台介绍顶部
+            .plat_top.cf
+                .l
+                    a(href="#")
+                        img(src="/skin/img/pt.jpg", alt="")
+                .l.plat_top_detail
+                    h1.title 铸造企业信息化系统（软件+硬件）
+                    .plat_step
+                        dl.nobd
+                            dt 1万
+                            dd 起投额
+                        dl
+                            dt 500万
+                            dd 目标额
+                        dl
+                            dt 450万
+                            dd 完成额
+                        dl
+                            dt 450万
+                            dd 完成额
+                        dl
+                            dt 90%
+                            dd 完成比例
+                        dl
+                            dt 大家投
+                            dd 所在平台
+                    //进度条
+                    .slider_f.mt10
+                        .slider_s(style="width:90%")
+                    .plat_address.mt40
+                        i.zczj.icon_water
+                        |广州
+                .plat_top_btns
+                    a.zx_btn.btn_blue(href="#") 收藏
+                    span.zx_btn.btn_blue(href="#",style="position:relative").
+                        分享
+                        <span class="bdsharebuttonbox" style="float:right;width: 100%;position: absolute;left: 0;height: 100%;">
+                                                        <a style="width: 100%;height: 100%; background:none;" href="#" class="bds_more" data-cmd="more"></a>
+                        </span>
+                        <script>
+                            window._bd_share_config = {
+                                common: {
+                                    bdPic: ''
+                                },
+                                share: [{
+                                    "bdSize": 16
+                                }],
+                            }
+
+                            //以下为js加载部分
+                            with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];;
+                        </script>
+            //左侧
+            .plat_main.l.mt20
+                .plat_box
+                    h1.plat_t 简介
+                    .plat_txt
+                        p.
+                            本项目分两个部分，铸造模拟系统和铸造ERP系统（软件+硬件）两部分可单独使用，也可以集成在一起。
+
+                        p.
+                            因模拟系统比较重要，因此单独拿出来说明
+
+                        p.
+                            Ø 模拟系统部分包括HYCAST铸造模拟软件和3D打印系统，HYCAST其功能是模拟分析铸造过程中可能产生的各种缺陷，诸如缩孔缩松，裹气，夹杂，浇不足等。3D打印系统用于打印出完成的工艺模型用于浇注。
+
+                        p.
+                            该部分运作方式是，使用HYCAST软件模拟铸造工艺，如果发现工艺合格，可以直接使用3D打印系统将工艺方案打印出来用于生产或试验。
+
+                        p.
+                            ØERP系统包括HYMES铸造企业管理系统和相关硬件设备HYMES是针对铸造企业专门开发的管理系统，包括从接订单到发货的各个环节。
+
+                        p.
+                            硬件设备是结合铸造企业现状而开发出和可以和HYMES连接的各种硬件设备
+
+                        p.
+                            项目亮点
+
+                        p.
+                            HYCAST软件采用不同定价和技术服务支持策略，目前所有的软件企业基本上只销售软件，或者说只懂软件，真正能够提供铸造技术支持的非常少，目前我们已经开展了全国范围内的铸造技术人员招募活动，让有兴趣的正在企业工作的铸造技术工程师能够为我们的客户提供技术服务，当然，能够学会我们的软件最好。其他企业做不到这一点。
+
+                        p.
+                            HYMES软件还没有竞争对手，美国的企业不出美国，英国的做不进来。
+
+                        p.
+                            市场背景与分析
+
+                        p.
+                            铸造行业是一个古老而又不可或缺的行业，但是技术革新很慢，包括软件和硬件Ø整个中国铸造行业拥有铸造企业约3万家 l其中5%左右正在使用铸造仿真系统，铸造仿真系统的价格从从10几万元到几百万元不等， l10%左右正在使用ERP系统，ERP系统的价格从几万元到几百万元不等。
+
+                        p.
+                             Ø随着企业对铸件质量要求和管理水平的提高及降低成本，和缩短交货周期的压力，越来越多的企业正在认识到铸造仿真系统，和铸造ERP系统的重要性 Ø当前正式商业化的国产铸造模拟软件有两款，但因为机制等原因基本停滞不前正式商业化的专门针对铸造企业的ERP软件国外有两家，国内基本为零。
+
+                        p.
+                            Ø目前还存在着信息安全的问题，很多铸造企业正在生产军工航天等涉及国家机密的铸件，基本每个铸件生产前都需要使用软件进行模拟分析，使用国外的软件有可能存在信息安全问题，已经有先例，国家也已经认识到了这一点。
+
+                        p.
+                            铸造行业是一个古老而又不可或缺的行业，但是技术革新很慢，包括软件和硬件Ø整个中国铸造行业拥有铸造企业约3万家 l其中5%左右正在使用铸造仿真系统，铸造仿真系统的价格从从10几万元到几百万元不等， l10%左右正在使用ERP系统，ERP系统的价格从几万元到几百万元不等。
+
+                        p.
+                             Ø随着企业对铸件质量要求和管理水平的提高及降低成本，和缩短交货周期的压力，越来越多的企业正在认识到铸造仿真系统，和铸造ERP系统的重要性 Ø当前正式商业化的国产铸造模拟软件有两款，但因为机制等原因基本停滞不前正式商业化的专门针对铸造企业的ERP软件国外有两家，国内基本为零。
+
+                        p.
+                            Ø目前还存在着信息安全的问题，很多铸造企业正在生产军工航天等涉及国家机密的铸件，基本每个铸件生产前都需要使用软件进行模拟分析，使用国外的软件有可能存在信息安全问题，已经有先例，国家也已经认识到了这一点。
+
+                        p.
+                            项目亮点
+
+                        p.
+                            HYCAST软件采用不同定价和技术服务支持策略，目前所有的软件企业基本上只销售软件，或者说只懂软件，真正能够提供铸造技术支持的非常少，目前我们已经开展了全国范围内的铸造技术人员招募活动，让有兴趣的正在企业工作的铸造技术工程师能够为我们的客户提供技术服务，当然，能够学会我们的软件最好。其他企业做不到这一点。
+            //左侧 end
+
+
+
+            //右侧
+            .plat_side.r.mt20
+                .plat_side_box.all_Show
+                    .title 你可能感兴趣的项目
+                    ul.con
+                        li
+                            a(href="#").img
+                                img(src="/skin/img/pt.jpg", alt="")
+                            p.plat_name
+                                a(href="#") 虾搞虾忙
+                            p 城市：深圳
+                            p 起投额：5K
+                        li
+                            a(href="#").img
+                                img(src="/skin/img/pt.jpg", alt="")
+                            p.plat_name
+                                a(href="#") 虾搞虾忙
+                            p 城市：深圳
+                            p 起投额：5K
+                        li
+                            a(href="#").img
+                                img(src="/skin/img/pt.jpg", alt="")
+                            p.plat_name
+                                a(href="#") 虾搞虾忙
+                            p 城市：深圳
+                            p 起投额：5K
+                        li
+                            a(href="#").img
+                                img(src="/skin/img/pt.jpg", alt="")
+                            p.plat_name
+                                a(href="#") 虾搞虾忙
+                            p 城市：深圳
+                            p 起投额：5K
+                        li
+                            a(href="#").img
+                                img(src="/skin/img/pt.jpg", alt="")
+                            p.plat_name
+                                a(href="#") 虾搞虾忙
+                            p 城市：深圳
+                            p 起投额：5K
+            //右侧 end
+
+
+    include Shade/footer

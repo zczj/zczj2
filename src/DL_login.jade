@@ -1,0 +1,155 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/login.min.css")
+    .bg_white.bg_login
+            .page_warp
+                .login_form.cf
+                    //左侧 505
+                    .login_main.l
+                        .login_t 登录
+                            .login_con
+                                .tab_login.cf
+                                    label.l(for="tab_btn_0")
+                                        input(type="checkbox",checked,data-index="0")#tab_btn_0
+                                        |普通登录
+                                    label.r(for="tab_btn_1")
+                                        input(type="checkbox",data-index="1")#tab_btn_1
+                                        |验证码登录
+                                //普通登录
+                                form(action="https://www.zczj.com")#login_pt.zj_form.zj_form_1
+                                    ul.tab_login_box(style="display:none;")
+                                        li
+                                            i.zczj.icon_person
+                                            input.txt(type="text" placeholder="手机号" name="pt_phone")
+                                        li
+                                            i.zczj.icon_pwd
+                                            input.txt(type="password" placeholder="密码" name="pt_pwd")
+                                        li.cf.remP
+                                            label(for="remPwd").l
+                                                input(type="checkbox")#remPwd
+                                                | 记住密码
+                                            a.r.forgetPwd(href="#") 忘记密码
+                                        li.f_red.login_error 错误提示
+                                        li.login_bnt_li
+                                            input(type="submit" value="登录").login_btn.zx_btn
+                                        li.login_tips
+                                            |还没有账号，
+                                            a(href="#") 立即注册
+                                //验证码登录
+                                form(action="/")#login_code.zj_form.zj_form_1
+                                    ul.tab_login_box
+                                        li
+                                            i.zczj.icon_person
+                                            input.txt(type="text" placeholder="手机号",name="code_phone")
+
+                                        li.getCode_li
+                                            i.zczj.icon_catgray
+                                            input.txt(type="text" placeholder="验证码",name="code_code")
+                                            <img class="getCodeBtn" style="cursor: pointer; background:#fff; vertical-align:middle" src="/Passport/VerifyImage" id="VerifyImage" title="看不清？点击换一个" onclick="javascript:document.getElementById('VerifyImage').src='localhost:4089/Passport/VerifyImage?r='+Math.random(  );return false;">
+                                        li.getCode_li
+                                            i.zczj.icon_catgray
+                                            input.txt(type="text" placeholder="验证码",name="code_code")
+                                            input.getCodeBtn(type="button",value="获取验证码")
+                                        li.f_red.login_error 错误提示
+                                        li(style="margin-top:10px")
+                                            input(type="submit" value="登录").login_btn.zx_btn
+                                        li.login_tips
+                                            |还没有账号，
+                                            a(href="#") 立即注册
+
+
+
+                    //右侧
+                    .login_side.r
+                        .login_t 其它登录方式
+                        .login_con
+                            .otherLogin.cf
+
+                                a(href="javascript:openQQ();",title='qq').other_icon
+                                    i.zczj.icon_qq
+                                    span 使用腾讯QQ注册
+                                a(href="javascript:openSina();",title='新浪网').other_icon
+                                    i.zczj.icon_sina
+                                    span 使用新浪微博注册
+                                a(href="javascript:openBaiDu();",title='百度').other_icon
+                                    i.zczj.icon_baidu
+                                    span 使用百度账号注册
+                                a(href="javascript:openRenRen();",title='人人网').other_icon
+                                    i.zczj.icon_rr
+                                    span 使用人人账号注册
+
+    script(src="skin/js/jquery.validate.min.js")
+    script.
+
+        $('.tab_login input').on('click',function() {
+            var inps=$('.tab_login input');
+            $.each(inps,function(i, el) {
+                $(inps).prop("checked",false)
+            });
+            $(this).prop("checked",true);
+            $('.tab_login_box').hide();
+            $('.tab_login_box').eq($(this).attr('data-index')).show();
+
+        })
+
+        //form 提交验证
+        $(function(){
+            //普通登录
+            $('#login_pt').validate({
+                ignore:"#remPwd",
+                rules:{
+                    pt_phone:{
+                        required:true,
+                    },
+                    pt_pwd:{
+                        required:true,
+                        minlength:6
+                    }
+                },
+                messages:{
+                    pt_phone:{
+                        required: '请输入手机号'
+                    },
+                    pt_pwd:{
+                        required: '请输入密码',
+                        minlength: '密码最小6位'
+                    }
+
+                },
+                submitHandler: function(form){
+                    dialog.isOk('form提交中。。。')
+                    form.submit();
+                }
+            })
+            //验证码登录
+            $('#login_code').validate({
+                rules:{
+                    code_phone:{
+                        required:true,
+                    },
+                    code_code:{
+                        required:true,
+                        minlength:4
+                    }
+                },
+                messages:{
+                    code_phone:{
+                        required: '请输入手机号'
+                    },
+                    code_code:{
+                        required: '请输入验证码',
+                        minlength: '密码最小4位'
+                    }
+
+                },
+                submitHandler: function(form){
+                    dialog.isOk('form提交中。。。')
+                    form.submit();
+                }
+            })
+        })
+
+
+
+
+    include Shade/footer

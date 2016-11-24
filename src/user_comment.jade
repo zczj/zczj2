@@ -1,0 +1,146 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/zixun.min.css")
+    link(rel="stylesheet", href="skin/css/user.min.css")
+    .page_warp
+        .container.mt40.cf
+            //右侧
+            .user_side.l
+                include Shade/user_side.jade
+            //左侧
+            .user_main.r
+                .collect_tab.btn_tab
+                    a(href="#").cur 给我的评论
+                    a(href="#") 给我的回复
+                    a(href="#") 我发表的评论
+                .box_tab.box_tab_comment(style="display:block;")
+                    .comment_tips.
+                         Hi，辛普森，您已经收到 <span class="f_blue">11</span> 条评论了，要记得及时回复他们哦。
+                    .comment_list
+                        .comment_item
+                            span.author_photo
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//avatar/20160729/20160729114653.jpg")
+                            p.comment_note.
+                                <span class="f_blue">路人甲</span>对我的留言进行了回复：
+                            p.comment_time 2015-12-05 16:37
+                            p.comment_replay.
+                                回复：谢谢你阅读我的文章，以后一起交流学习！
+                            //-
+                                .comment_replay_sub
+                                    p.i_say 我说：
+                                    p.replay_txt 文章写得不错，豁然开朗，感谢作者~
+                            p.comment_btns
+                                a(href="#").btn.f_blue 删除
+                                a(href="#").btn.f_blue 回复
+                            .comment_replay_form(style="display:block;")
+                                textarea
+                                p.replay_form_btn
+                                    a.btn(href="#") 发表
+                        .comment_item
+                            span.author_photo
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//avatar/20160729/20160729114653.jpg")
+                            p.comment_note.
+                                <span class="f_blue">路人甲</span>对我的留言进行了回复：
+                            p.comment_time 2015-12-05 16:37
+                            p.comment_replay.
+                                回复：谢谢你阅读我的文章，以后一起交流学习！
+                            //-
+                                .comment_replay_sub
+                                    p.i_say 我说：
+                                    p.replay_txt 文章写得不错，豁然开朗，感谢作者~
+                            p.comment_btns
+                                a(href="#").btn.f_blue 删除
+                                a(href="#").btn.f_blue 回复
+                            .comment_replay_form
+                                textarea
+                                p.replay_form_btn
+                                    a.btn(href="#") 发表
+                .box_tab.box_tab_comment
+                    .comment_tips.
+                         您发表的评论共收到 <span class="f_blue">6</span> 条回复。
+                    .comment_list
+                        .comment_item
+                            span.author_photo
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//avatar/20160729/20160729114653.jpg")
+                            p.comment_note.
+                                 <span class="f_blue">巴特</span>对我的原创文章<span class="f_blue">《互金网站八大异常表现》</span>进行了评论：
+                            p.comment_time 2015-12-05 16:37
+                            p.comment_replay.
+                                回复：谢谢你阅读我的文章，以后一起交流学习！
+                            .comment_replay_sub
+                                p.i_say 我说：
+                                p.replay_txt 文章写得不错，豁然开朗，感谢作者~
+                            p.comment_btns
+                                a(href="#").btn.f_blue 删除
+                                a(href="#").btn.f_blue 回复
+                            .comment_replay_form(style="display:block;")
+                                textarea
+                                p.replay_form_btn
+                                    a.btn(href="#") 发表
+                        .comment_item
+                            span.author_photo
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//avatar/20160729/20160729114653.jpg")
+                            p.comment_note.
+                                 <span class="f_blue">巴特</span>对我的原创文章<span class="f_blue">《互金网站八大异常表现》</span>进行了评论：
+                            p.comment_time 2015-12-05 16:37
+                            p.comment_replay.
+                                回复：谢谢你阅读我的文章，以后一起交流学习！
+                            .comment_replay_sub
+                                p.i_say 我说：
+                                p.replay_txt 文章写得不错，豁然开朗，感谢作者~
+                            p.comment_btns
+                                a(href="#").btn.f_blue 删除
+                                a(href="#").btn.f_blue 回复
+                            .comment_replay_form
+                                textarea
+                                p.replay_form_btn
+                                    a.btn(href="#") 发表
+                .box_tab.box_tab_comment
+                    .comment_tips.
+                         您发表的评论共收到 <span class="f_blue">6</span> 条回复。
+                    .comment_list
+                        .comment_item
+                            span.author_photo
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//avatar/20160729/20160729114653.jpg")
+                            p.comment_note.
+                                我对<span class="f_blue">张旭阳</span>的原创文章<span class="f_blue">科技可能不会改变金融格局》</span>进行了评论：
+                            p.comment_time 2015-12-05 16:37
+                            p.comment_replay.
+                                回复：谢谢你阅读我的文章，以后一起交流学习！
+                            //-
+                                .comment_replay_sub
+                                p.i_say 我说：
+                                p.replay_txt 文章写得不错，豁然开朗，感谢作者~
+                            //-
+                                p.comment_btns
+                                    a(href="#").btn.f_blue 删除
+                                    a(href="#").btn.f_blue 回复
+                                .comment_replay_form
+                                    textarea
+                                    p.replay_form_btn
+                                        a.btn(href="#") 发表
+                        .comment_item
+                            span.author_photo
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//avatar/20160729/20160729114653.jpg")
+                            p.comment_note.
+                                我对<span class="f_blue">张旭阳</span>的原创文章<span class="f_blue">科技可能不会改变金融格局》</span>进行了评论：
+                            p.comment_time 2015-12-05 16:37
+                            p.comment_replay.
+                                回复：谢谢你阅读我的文章，以后一起交流学习！
+                        .comment_item
+                            span.author_photo
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//avatar/20160729/20160729114653.jpg")
+                            p.comment_note.
+                                我对<span class="f_blue">张旭阳</span>的原创文章<span class="f_blue">科技可能不会改变金融格局》</span>进行了评论：
+                            p.comment_time 2015-12-05 16:37
+                            p.comment_replay.
+                                回复：谢谢你阅读我的文章，以后一起交流学习！
+                        .comment_item
+                            span.author_photo
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//avatar/20160729/20160729114653.jpg")
+                            p.comment_note.
+                                我对<span class="f_blue">张旭阳</span>的原创文章<span class="f_blue">科技可能不会改变金融格局》</span>进行了评论：
+                            p.comment_time 2015-12-05 16:37
+                            p.comment_replay.
+                                回复：谢谢你阅读我的文章，以后一起交流学习！
+

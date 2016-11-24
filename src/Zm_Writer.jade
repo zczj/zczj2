@@ -1,0 +1,50 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/special.min.css")
+    .bg_white
+        .spc_banner(style="background-image:url(skin/img/spec/report_banner2.jpg")
+        .page_warp.mb40
+            .spc_box.spc_zm_note
+                p.
+                    众筹之家全新改版，现面向新老朋友发出邀请，诚邀您成为我们的专栏作者。<br>
+                    只要您关注、喜爱互联网金融、创投等各领域，有热情、有精力并且有信心为我们定期投送保质保量的稿件，那就别犹豫，赶紧来众筹之家--百家专栏开设专属于你的自媒体吧！
+                p.
+                    我们深知高手在民间，群众的眼睛是雪亮的这一简单朴素的道理，我们衷心地希望关注股权众筹投资，关注创业的读者能够把自己的观察，想法，感悟汇聚成文字，通过众筹之家的平台分享给更多的人，欢迎你在众筹之家上开设专栏，打造自己个人的自媒体品牌。
+
+        .spc_gray_bg
+            .spc_box
+                .spc_con.t_center
+                    img(src="skin/img/spec/spec5.jpg", alt="")
+        .page_warp.mb40
+            .spc_box.spec_form
+                h1.title 信息填写
+                .spc_con
+                        form(action="/")#spec_form
+                            ul.spec_form_box
+                                li
+                                    span.spec_form_t.
+
+                                        作者笔名：
+                                    input.spec_txt(type="text")
+                                li
+                                    span.spec_form_t.
+
+                                        选择头像：
+                                    input(type="file").fileupload
+                                li
+                                    span.spec_form_t.
+
+                                        个人简介：
+                                    textarea.spec_txt
+                                li
+                                    span.spec_form_t.
+
+                                        个人作品：
+                                    input(type="file").fileupload
+                                li.subBtn
+                                    input(type="submit",value="确定提交")
+
+
+
+
+    include Shade/footer

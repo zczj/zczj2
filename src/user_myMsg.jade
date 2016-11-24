@@ -1,0 +1,91 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/zixun.min.css")
+    link(rel="stylesheet", href="skin/css/user.min.css")
+    .page_warp
+        .container.mt40.cf
+            //右侧
+            .user_side.l
+                include Shade/user_side.jade
+            //左侧
+            .user_main.r
+                .collect_tab.btn_tab
+                    a(href="#").cur 我的消息
+                .box_tab.box_tab_comment(style="display:block;")
+                    .comment_list
+                        .comment_item.comment_item_msg
+                            span.author_photo
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//avatar/20160729/20160729114653.jpg")
+                            p.time
+                                span 辛普森
+                                span 2015-12-05 16:37
+                            p.txt.
+                                亲爱的众筹之家用户， 您收到了一个“见面礼红包”， 金额为520.00元，永久有效，您可以在投资中使用。
+                            p.replay_btns
+                                a(href="#").btn.f_blue 删除
+                                a(href="#").btn.f_blue.btn_replay 回复
+                            .replay_list
+                                //有回复时显示 ：
+                                ul
+                                    li
+                                        span.f_blue 回复牛屎：
+                                        |谢谢辛普森，有机会一起探讨影视投资。
+                                .replay_btn_sub
+                                        a.btn(href="javascript:void(0);",onclick="laosu.tools.showEle($(this).parent().next());") 我也说一句
+                                .replay_sub_form
+                                    textarea(placeholder="回复辛普森：")
+                                    .replay_btn_sub
+                                        a.btn 发表
+                        .comment_item.comment_item_msg
+                            span.author_photo
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//avatar/20160729/20160729114653.jpg")
+                            p.time
+                                span 辛普森
+                                span 2015-12-05 16:37
+                            p.txt.
+                                亲爱的众筹之家用户， 您收到了一个“见面礼红包”， 金额为520.00元，永久有效，您可以在投资中使用。
+                            p.replay_btns
+                                a(href="#").btn.f_blue 删除
+                                a(href="#").btn.f_blue.btn_replay 回复
+                            .replay_list
+                                //没回复时显示：
+
+                                .replay_sub_form
+                                    textarea(placeholder="回复：")
+                                    .replay_btn_sub
+                                        a.btn 发表
+                        .comment_item.comment_item_msg
+                            span.author_photo
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//avatar/20160729/20160729114653.jpg")
+                            p.time
+                                span 辛普森
+                                span 2015-12-05 16:37
+                            p.txt.
+                                亲爱的众筹之家用户， 您收到了一个“见面礼红包”， 金额为520.00元，永久有效，您可以在投资中使用。
+                            p.replay_btns
+                                a(href="#").btn.f_blue 删除
+                                a(href="#").btn.f_blue.btn_replay 回复
+                            .replay_list
+                                //没回复时显示：
+
+                                .replay_sub_form
+                                    textarea(placeholder="回复：")
+                                    .replay_btn_sub
+                                        a.btn 发表
+    script.
+        $('.btn_replay').each(function(i, el) {
+            $(el).click(function() {
+                var _parent= $(el).parents('.comment_item_msg').find('.replay_list');
+                if ($(el).hasClass('cur')) {
+                    $(el).removeClass('cur')
+                    _parent.hide();
+                } else {
+                    $(el).addClass('cur');
+                    if (_parent.find('ul').size()<=0) {
+                        _parent.find('.replay_sub_form').show();
+                    }
+                    _parent.show();
+                }
+            })
+        })
+

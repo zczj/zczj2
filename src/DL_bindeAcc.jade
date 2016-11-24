@@ -1,0 +1,66 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/login.min.css")
+    .bg_white.bg_login
+            .page_warp
+                .login_form.cf.bindAcc
+                    //左侧 505
+                    .login_main
+                        .login_t 账号绑定
+                            .login_con
+                                //普通登录
+                                form(action="https://www.zczj.com")#bind_Acc.zj_form.zj_form_1
+                                    ul.tab_login_box(style="margin-top:50px;")
+                                        li(style="margin-top:30px;")
+                                            i.zczj.icon_person
+                                            input.txt(type="text" placeholder="手机号" name="pt_phone")
+                                        li(style="margin-top:30px;")
+                                            i.zczj.icon_pwd
+                                            input.txt(type="password" placeholder="密码" name="pt_pwd")
+                                        li.note
+                                            span.login_name
+                                            .login_val
+                                                label
+                                                    input(type="checkbox" name="agree" checked)
+                                                    |我已经阅读并接受
+                                                    a(href="#") 《众筹之家服务条款》
+                                        li.login_bnt_li(style="margin-top:20px;")
+                                            input(type="submit" value="确定").login_btn.zx_btn
+
+    script(src="skin/js/jquery.validate.min.js")
+    script.
+        $(function(){
+            $('#bind_Acc').validate({
+                rules:{
+                    pt_phone:{
+                        required:true,
+                    },
+                    pt_pwd:{
+                        required:true,
+                        minlength:6
+                    },
+                    agree: {
+                        required: true
+                    }
+                },
+                messages:{
+                    pt_phone:{
+                        required: '请输入手机号'
+                    },
+                    pt_pwd:{
+                        required: '请输入密码',
+                        minlength: '密码最小6位'
+                    },
+                    agree: {
+                        required: '请阅读《众筹之家服务条款》'
+                    }
+
+                },
+                submitHandler: function(form){
+                    dialog.isOk('form提交中。。。')
+                    form.submit();
+                }
+            })
+        })
+
+    include Shade/footer

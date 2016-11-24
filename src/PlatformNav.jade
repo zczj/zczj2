@@ -1,0 +1,186 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/plat.min.css")
+    .bg_white
+        .page_warp.plat_nav
+            //- banner
+            .plat_banner
+                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//homeshow/20160819/20160819164002.jpg", alt="")
+            //平台导航tab切换
+            .plat_tab
+                .btn_tab.btn_tab_plat
+                    a(href="#").cur 平台筛选
+                    a(href="#") 我的收藏
+                    .plat_select
+                        input(type="text",placeholder="输入平台关键字").txt
+                        input(type="button").btn
+                        i.zczj.icon-fdj
+                .box_tab.box_tab_plat(style="display:block;")
+                    ul
+                        li
+                            span.plat_s 平台类型：
+                            a(href="#").cur 全部
+                            a(href="#") 股权众筹
+                            a(href="#") 权益众筹
+                            a(href="#") 综合众筹
+                        li
+                            span.plat_s 平台类型：
+                            a(href="#").cur 全部
+                            a(href="#") 互联网
+                            a(href="#") 影视
+                            a(href="#") 游戏
+                            a(href="#") 店铺
+                            a(href="#") 医疗保健
+                            a(href="#") 房地产
+                            a(href="#") 旅游
+                            a(href="#") 其他
+                        li
+                            span.plat_s 所属地区：
+                            a(href="#").cur 全部
+                            a(href="#") 北京
+                            a(href="#") 上海
+                            a(href="#") 广州
+                            a(href="#") 深圳
+                            a(href="#") 其他
+                .box_tab.box_tab_plat.cf
+                    span.plat_item 汇梦公社
+                        i.zczj.icon_cut
+                    span.plat_item 苏宁众筹
+                        i.zczj.icon_cut
+                    span.plat_item 京东众筹
+                        i.zczj.icon_cut
+            //平台列表
+            .plat_list.mt20
+                table
+                    thead
+                        tr
+                            th(style="text-align: left; text-indent:50px;width:300px;") 名称
+                            th 类型
+                            th 地区
+                            th 领域
+                            th 创始人
+                            th 上线时间
+                    tbody
+                        tr
+                            td
+                                dl.cf
+                                    dt.l
+                                        img(src="skin/img/pt.jpg", alt="")
+                                    dd.l
+                                        h2.title 天使客
+                                            i.zczj.icon_star
+                                        p.text 深圳市安奇克拉投资有限公司
+                            td 股权众筹
+                            td 深圳
+                            td 互联网
+                            td 石俊
+                            td 2015
+                        tr
+                            td
+                                dl.cf
+                                    dt.l
+                                        img(src="skin/img/pt.jpg", alt="")
+                                    dd.l
+                                        h2.title 天使客
+                                            i.zczj.icon_star.icon_collect
+                                        p.text 深圳市安奇克拉投资有限公司
+                            td 股权众筹
+                            td 深圳
+                            td 互联网
+                            td 石俊
+                            td 2015
+                        tr
+                            td
+                                dl.cf
+                                    dt.l
+                                        img(src="skin/img/pt.jpg", alt="")
+                                    dd.l
+                                        h2.title 天使客
+                                            i.zczj.icon_star.icon_collect
+                                        p.text 深圳市安奇克拉投资有限公司
+                            td 股权众筹
+                            td 深圳
+                            td 互联网
+                            td 石俊
+                            td 2015
+                        tr
+                            td
+                                dl.cf
+                                    dt.l
+                                        img(src="skin/img/pt.jpg", alt="")
+                                    dd.l
+                                        h2.title 天使客
+                                            i.zczj.icon_star.icon_collect
+                                        p.text 深圳市安奇克拉投资有限公司
+                            td 股权众筹
+                            td 深圳
+                            td 互联网
+                            td 石俊
+                            td 2015
+                        tr
+                            td
+                                dl.cf
+                                    dt.l
+                                        img(src="skin/img/pt.jpg", alt="")
+                                    dd.l
+                                        h2.title 天使客
+                                            i.zczj.icon_star.icon_collect
+                                        p.text 深圳市安奇克拉投资有限公司
+                            td 股权众筹
+                            td 深圳
+                            td 互联网
+                            td 石俊
+                            td 2015
+                        tr
+                            td
+                                dl.cf
+                                    dt.l
+                                        img(src="skin/img/pt.jpg", alt="")
+                                    dd.l
+                                        h2.title 天使客
+                                            i.zczj.icon_star.icon_collect
+                                        p.text 深圳市安奇克拉投资有限公司
+                            td 股权众筹
+                            td 深圳
+                            td 互联网
+                            td 石俊
+                            td 2015
+                //翻页
+                <div class="black2"><span class="sp-cur">1</span><a href="#"><span>2</span></a><a href="#"><span>3</span></a><a href="#"><span>4</span></a><a href="#"><span>5</span></a><a href="#"><span>6</span></a><a href="#"><span>7</span></a><a href="#"><span>8</span></a><a href="#"><span>9</span></a><a href="#)"><span>10</span></a><a href="#">»</a></div>
+
+
+    script.
+        $(function () {
+            (function () {
+                $('.plat_item .icon_cut').each(function (i,el) {
+                    $(el).click(function () {
+                        //此提交为测试，大黑们忽略
+                        $.ajax({
+                            url: 'data/plat_del.json',
+                            success: function (data) {
+                                if (data.isOk===1) {
+                                    $(el).parents('.plat_item').remove();
+                                    dialog.isOk('删除成功');
+                                }else{
+                                    dialog.error('删除失败');
+                                }
+                            }
+                        })
+                    })
+                })
+            })('删除收藏平台');
+
+            ;(function () {
+                $('.plat_select .btn').click(function () {
+                    if(laosu.tools.changeEmpty($('.plat_select .txt').val().trim())){
+                        dialog.error('输入不能为空！');
+                    }
+                })
+            })('搜索点击事件');
+
+        })
+    include Shade/footer
+
+
+
+

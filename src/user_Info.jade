@@ -1,0 +1,130 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/zixun.min.css")
+    link(rel="stylesheet", href="skin/css/user.min.css")
+    .page_warp
+        .container.mt40.cf
+            //右侧
+            .user_side.l
+                include Shade/user_side.jade
+            //左侧
+            .user_main.r
+                .collect_tab.btn_tab
+                    a(href="#").cur 基本信息
+                    a(href="#") 安全中心
+                .box_tab(style="display:block;")
+                    .user_info
+                        .upload_photo.mt40
+                            .user_info_item
+                                span.u_name 头像：
+                                span.user_photo
+                                    img(src="skin/img/default_photo.png", alt="")
+                                span.btn.upload_btn 上传
+                                    input.upload_file(type="file")
+                            .user_info_item
+                                span.u_name 昵称：
+                                span.editeName 张三
+                                i.zczj.icon_u_bi
+                        .user_info_item
+                            span.u_name 手机号：
+                            span.u_val 136****8614
+                        .user_info_item
+                            span.u_name 电子邮箱：
+                            span.u_val 94987591@qq.com
+                        .user_info_item
+                            span.u_name 绑定微信：
+                            input.txt(type="text")
+
+                        .user_info_item
+                            span.u_name 性别：
+                            select.txt(name="")
+                                option(value="0") 女
+                                option(value="1") 男
+                        .user_info_item
+                            span.u_name 年龄：
+                            select.txt(name="")
+                                option(value="0") 20
+                                option(value="1") 30
+
+                        .user_info_item
+                            span.u_name 职业：
+                            select.txt(name="",style="width:100px;")
+                                option(value="0") 警察
+                                option(value="1") 小偷
+                        .user_info_item
+                            span.u_name
+                            input.btn.btn_info(type="submit")
+                .box_tab.user_safe
+
+                    .show_status_bar.cf.mt20
+                        span.title 登录密码
+                        span.tag
+                            i.zczj.icon_u_right
+                            |已设置
+                        a(href="javascript:void(0);",onclick="laosu.tools.showEle($('.show_box_uPwd'))").showBtn 修改
+                    .show_box.show_box_uPwd
+                        .user_form.user_form_userPwd
+                                dl
+                                    dt
+                                        span.title 当前登录密码：
+                                        input(type="password",placeholder="包含字母和数字的8-15位字符").txt
+                                    dd
+                                        span.title 新登录密码：
+                                        input(type="password",placeholder="包含字母和数字的8-15位字符").txt
+                                    dd
+                                        span.title 确认新密码：
+                                        input(type="password",placeholder="包含字母和数字的8-15位字符").txt
+                                    dd
+                                        span.title
+                                        input(type="button",value="保存").btn.btn-show
+                    .show_status_bar.cf
+                        span.title 授权管理
+                        span.tag
+                            i.zczj.icon_u_error
+                            |已设置
+                        a(href="javascript:void(0);",onclick="laosu.tools.showEle($('.show_box_uWx'))").showBtn 修改
+                    .show_box.show_box_uWx
+                        .stepBar.cf
+                                .step_s.steps_1.cur
+                                    i.steps_num 1
+                                    p 授权修改
+                                .step_s.steps_2
+                                    i.steps_num 2
+                                    p 完成
+                        dl
+                            dt
+                                img(src="skin/img/zjm_code.jpg", alt="")
+                            dd.
+                                请用你想要授权的社交账号扫描此二维码
+    script.
+        $('.show_box_uWx img').click(function() {
+            layer.open({
+              type: 1,
+              skin: 'layui-layer-laosu', //样式类名
+              closeBtn: 0, //不显示关闭按钮
+              shift: 2,
+              shadeClose: true, //开启遮罩关闭
+              content: '<div class="popWx"><i class="zczj icon_u_suc"></i><p class="popWxtxt">恭喜您，修改授权成功！</p></div>'
+            });
+        })
+        $('.icon_u_bi').click(function () {
+            var el=$('.editeName');
+            var txt=el.text();
+            var input = $("<input type='text' class='txt' style='width:80px;' value='" + txt + "'/>");
+            el.html(input);
+            input.click(function() { return false; });
+            //获取焦点
+            input.trigger("focus");
+            input.blur(function() {
+                var newtxt = $(this).val();
+                el.html(newtxt);
+                if (newtxt != txt) {
+                    layer.open({
+                        content:'修改成功',
+                        icon:1,
+                    })
+                }
+            });
+        })
+
+

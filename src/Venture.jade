@@ -1,0 +1,84 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/special.min.css")
+    .bg_white
+        .spc_banner(style="background-image:url(skin/img/spec/report_banner1.jpg")
+        .page_warp.mb40
+            //众筹之家的优势
+            .spc_box
+                .spc_con.t_center
+                    img(src="skin/img/spec/spec2.jpg", alt="")
+        .spc_gray_bg
+            .page_warp
+                .spc_box
+                    .spc_con.t_center
+                        img(src="skin/img/spec/spec3.jpg", alt="")
+        .page_warp
+
+                .spc_box
+                     h1.title 报名流程
+                    .spc_con.t_center.mt20
+                        img(src="skin/img/spec/spec4.jpg", alt="")
+                .spc_box.spec_form
+                    h1.title 信息填写
+                    .spc_con
+                        form(action="/")#spec_form
+                            ul.spec_form_box
+                                li
+                                    span.spec_form_t.
+                                        <i class='red'> * </i>
+                                        公司名称：
+                                    input.spec_txt(type="text")
+                                li
+                                    span.spec_form_t.
+                                        <i class='red'> * </i>
+                                        成立时间：
+                                    input.spec_txt(type="text")
+                                li
+                                    span.spec_form_t.
+                                        <i class='red'> * </i>
+                                        创业领域：
+                                    input.spec_txt(type="text")
+                                li
+                                    span.spec_form_t.
+                                        <i class='red'> * </i>
+                                        联系电话：
+                                    input.spec_txt(type="text")
+                                li
+                                    span.spec_form_t.
+                                        <i class='red'> * </i>
+                                        联系邮箱：
+                                    input.spec_txt(type="text")
+                                li
+                                    span.spec_form_t.
+                                        <i class='red'> * </i>
+                                        联系负责人：
+                                    input.spec_txt(type="text")
+                                li
+                                    span.spec_form_t.
+                                        公司所在地：
+                                    input.spec_txt(type="text")
+                                li
+                                    span.spec_form_t.
+                                        公司网址：
+                                    input.spec_txt(type="text")
+
+                                li
+                                    span.spec_form_t.
+                                        <i class='red'> * </i>
+                                        商业计划书：
+                                    input(type="file").fileupload
+                                li
+                                    span.spec_form_t.
+                                        <i class='red'> * </i>
+                                        公司简介：
+                                    input(type="file").fileupload
+                                li.subBtn
+                                    input(type="submit",value="确定提交")
+
+
+
+
+
+
+    include Shade/footer

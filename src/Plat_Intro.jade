@@ -1,0 +1,647 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/zixun.min.css")
+    link(rel="stylesheet", href="skin/css/plat.min.css")
+    link(rel="stylesheet", href="skin/plugs/comment/css/comment.css")
+    .bg_gray
+        .page_warp.cf.mb40
+            //平台介绍顶部
+            .plat_top.plat_top_Intro.cf
+                .l.plat_log
+                    a(href="#")
+                        img(src="/skin/img/pt.jpg", alt="")
+                .l.plat_top_detail
+                    h1.title 天使客
+                    p.plat_info 创始人：石俊
+                    p.plat_info 公司全称：深圳市安奇克拉投资有限公司
+                    p.plat_info 专注领域：互联网
+                dl.r.plat_num
+                    dt 50
+                    dd 成功项目
+
+
+                .plat_top_btns
+                    a.zx_btn.btn_blue(href="#") 登录平台
+                    a.zx_btn.btn_blue(href="#") 分享
+            //左侧
+            .plat_main.l
+                .btn_tab.plat_tab
+                        a(href="#").cur 关于我们
+                        a(href="#") 相关资讯
+                        a(href="#") 平台项目
+                .box_tab(style="display:block")
+                    .plat_box
+                        .plat_t 简介
+                        .plat_txt
+                            p.
+                                天使客（AngelClub）是由腾讯创始人之一曾李青、经纬创投创始人张颖、清华系水木资本、创富志资本、
+                                熊猫资本以及多家上市公司的管理层联合投资的资产管理平台，提供包括私募基金、定向增发、优质股权
+                                等全品类、多维度资产配置服务。
+
+                            p.
+                                深圳市天使客资本管理有限公司（简称“天使客资本”）是深圳市安奇克拉投资有限公司（简称“天使客”
+                                ）旗下全资控股的资本管理公司，中国证券基金业协会备案号：P1018864。
+                    .plat_box
+                        .plat_t 工商信息
+                        .plat_txt.
+                            公司名称：   杭州募聚网络科技有限公司 <br>
+                            公司总部：   杭州市上城区南星街道凤凰山脚路7号凤凰御元A1  <br>
+                            经营范围：   股权众筹  <br>
+                            创 始 人：  邵锟
+                    .plat_box
+                        .plat_t 联系方式
+                        .plat_txt.
+                            公司名称：深圳市安奇克拉投资有限公司<br>
+                            官方客服咨询热线：0755-86716136<br>
+                            投资人咨询服务专线：ir@angelclub.com<br>
+                            创业者咨询服务邮箱：bp@angelclub.com<br>
+                            创业者QQ交流群：363389965<br>
+                            微信公众号：angelclub2014<br>
+                            公司地址：深圳市南山区科苑大道科兴科学园A2单元1401
+                    .plat_box
+                        .plat_txt.palt_comment
+                            #comment
+                                .comment_head.
+                                    网友评论
+                                    <span>（已有5条评论）</span>
+                                .comment_post_txt
+                                    .comment_post_t
+                                        //- i.icon.icon_bi
+                                        textarea(name="saytext_0",placeholder="写评论")#saytext_0.input
+                                        .comment_post_btn
+                                            i.icon.icon_face.emotion
+                                            a(href="#").btn.btn_comment 评论
+                                .comment_list.comment_hot
+                                    .comment_list_t 以下为精彩评论
+                                    .com_li
+                                        span.author
+                                            img(src="http://img.zczj.com//avatar/20160624/2016062410090932845669.jpg", alt="")
+                                        p.com_title.
+                                            <span class="com_user">SatisfyMe</span>：文章观点深刻，我深表认同！
+                                        ul.com_replay_list
+                                            li.
+                                                <span class="com_user">@SatisfyMe</span>
+                                                文章观点深刻，我深表认同！
+                                            li.
+                                                <span class="com_user">@SatisfyMe</span>
+                                                文章观点深刻，我深表认同！
+
+                                        p.com_tools
+
+                                            span.com_zan
+                                                span.com_jb 举报
+                                                span
+                                                    i.icon.icon_com_zan
+                                                    |（30）
+                                                ||
+                                                span.comment_replay 评论
+
+                                            span.com_data 8月24日 10:09
+                                        .comment_post_txt.comment_list_replay
+                                            .comment_post_t
+                                                //- i.icon.icon_bi
+                                                textarea(name="saytext_1",placeholder="写评论")#saytext_1.input
+                                                .comment_post_btn
+                                                    i.icon.icon_face.emotion
+                                                    a(href="#").btn.btn_comment 评论
+                                    .com_li
+                                        span.author
+                                            img(src="http://img.zczj.com//avatar/20160624/2016062410090932845669.jpg", alt="")
+                                        p.com_title.
+                                            <span class="com_user">SatisfyMe</span>：文章观点深刻，我深表认同！
+                                        ul.com_replay_list
+                                            li.
+                                                <span class="com_user">@SatisfyMe</span>
+                                                文章观点深刻，我深表认同！
+                                            li.
+                                                <span class="com_user">@SatisfyMe</span>
+                                                文章观点深刻，我深表认同！
+
+                                        p.com_tools
+
+                                            span.com_zan
+                                                span.com_jb 举报
+                                                span
+                                                    i.icon.icon_com_zan
+                                                    |（30）
+                                                ||
+                                                span.comment_replay 评论
+
+                                            span.com_data 8月24日 10:09
+                                        .comment_post_txt.comment_list_replay
+                                            .comment_post_t
+                                                //- i.icon.icon_bi
+                                                textarea(name="saytext_2",placeholder="写评论")#saytext_2.input
+                                                .comment_post_btn
+                                                    i.icon.icon_face.emotion
+                                                    a(href="#").btn.btn_comment 评论
+                                .comment_list.comment_new
+                                    .comment_list_t 以下为最新评论
+                                    .com_li
+                                        span.author
+                                            img(src="http://img.zczj.com//avatar/20160624/2016062410090932845669.jpg", alt="")
+                                        p.com_title.
+                                            <span class="com_user">SatisfyMe</span>：文章观点深刻，我深表认同！
+                                        ul.com_replay_list
+                                            li.
+                                                <span class="com_user">@SatisfyMe</span>
+                                                文章观点深刻，我深表认同！
+                                            li.
+                                                <span class="com_user">@SatisfyMe</span>
+                                                文章观点深刻，我深表认同！
+
+                                        p.com_tools
+
+                                            span.com_zan
+                                                span.com_jb 举报
+                                                span
+                                                    i.icon.icon_com_zan
+                                                    |（30）
+                                                ||
+                                                span.comment_replay 评论
+
+                                            span.com_data 8月24日 10:09
+                                        .comment_post_txt.comment_list_replay
+                                            .comment_post_t
+                                                //- i.icon.icon_bi
+                                                textarea(name="saytext_3",placeholder="写评论")#saytext_3.input
+                                                .comment_post_btn
+                                                    i.icon.icon_face.emotion
+                                                    a(href="#").btn.btn_comment 评论
+                                    .com_li
+                                        span.author
+                                            img(src="http://img.zczj.com//avatar/20160624/2016062410090932845669.jpg", alt="")
+                                        p.com_title.
+                                            <span class="com_user">SatisfyMe</span>：文章观点深刻，我深表认同！
+                                        ul.com_replay_list
+                                            li.
+                                                <span class="com_user">@SatisfyMe</span>
+                                                文章观点深刻，我深表认同！
+                                            li.
+                                                <span class="com_user">@SatisfyMe</span>
+                                                文章观点深刻，我深表认同！
+
+                                        p.com_tools
+
+                                            span.com_zan
+                                                span.com_jb 举报
+                                                span
+                                                    i.icon.icon_com_zan
+                                                    |（30）
+                                                ||
+                                                span.comment_replay 评论
+
+                                            span.com_data 8月24日 10:09
+                                        .comment_post_txt.comment_list_replay
+                                            .comment_post_t
+                                                //- i.icon.icon_bi
+                                                textarea(name="saytext_4",placeholder="写评论")#saytext_4.input
+                                                .comment_post_btn
+                                                    i.icon.icon_face.emotion
+                                                    a(href="#").btn.btn_comment 评论
+                .box_tab.zx_items.plat_box
+                    .zx_news_item
+                        //-
+                            h1.zx_item_t
+                                span.zx_tag.zx_tag_sd 深度
+                                a(href="#") 【教程】众筹项目发起人该如何保护知识产权？
+                        .zx_itme_con.cf
+                            .l
+                                a(href="#")
+                                    span.tag 众筹
+                                    img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                            .r
+                                a(href="#").title 神烦警探
+                                .txt.
+                                    作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                .item_bar.cf
+                                    .l.cf
+                                        span.f_blue 众筹大文豪
+                                        span 3个小时前
+                                    .r
+                                        span.no_cirl
+                                            i.zczj.icon-zan
+                                            |(30)
+                                        span
+                                            i.zczj.icon-msg
+                    .zx_news_item
+                        .zx_itme_con.cf
+                            .l
+                                a(href="#")
+                                    span.tag 众筹
+                                    img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                            .r
+                                a(href="#").title 神烦警探
+                                .txt.
+                                    作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                .item_bar.cf
+                                    .l.cf
+                                        span.f_blue 众筹大文豪
+                                        span 3个小时前
+                                    .r
+                                        span.no_cirl
+                                            i.zczj.icon-zan
+                                            |(30)
+                                        span
+                                            i.zczj.icon-msg
+                    .zx_news_item
+                        .zx_itme_con.cf
+                            .l
+                                a(href="#")
+                                    span.tag 众筹
+                                    img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                            .r
+                                a(href="#").title 神烦警探
+                                .txt.
+                                    作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                .item_bar.cf
+                                    .l.cf
+                                        span.f_blue 众筹大文豪
+                                        span 3个小时前
+                                    .r
+                                        span.no_cirl
+                                            i.zczj.icon-zan
+                                            |(30)
+                                        span
+                                            i.zczj.icon-msg
+                    .zx_news_item
+                        .zx_itme_con.cf
+                            .l
+                                a(href="#")
+                                    span.tag 众筹
+                                    img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                            .r
+                                a(href="#").title 神烦警探
+                                .txt.
+                                    作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                .item_bar.cf
+                                    .l.cf
+                                        span.f_blue 众筹大文豪
+                                        span 3个小时前
+                                    .r
+                                        span.no_cirl
+                                            i.zczj.icon-zan
+                                            |(30)
+                                        span
+                                            i.zczj.icon-msg
+                    dl.lightBox_item
+                        a.title(href="#") 读数|汽车众筹热背后的冷思考
+                        .text.
+                            汽车众筹始于2015年，经过将近1年默默无闻的时间，2016年，特别是6月份以来，突然迎来爆发突然迎来爆发性增长，引得
+                            广泛关注。
+                        ul.light_img.cf
+                            li.ml0
+                                span.tag 研究
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+                            li
+                                span.tag 研究
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+                            li
+                                span.tag 研究
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                        .item_bar.cf
+                            .l.cf
+                                span.f_blue 众筹大文豪
+                                span 3个小时前
+                            .r
+                                span.no_cirl
+                                    i.zczj.icon-zan
+                                    |(30)
+                                span
+                                    i.zczj.icon-msg
+                    .zx_news_item
+                        .zx_itme_con.cf
+                            .l
+                                a(href="#")
+                                    span.tag 众筹
+                                    img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                            .r
+                                a(href="#").title 神烦警探
+                                .txt.
+                                    作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                .item_bar.cf
+                                    .l.cf
+                                        span.f_blue 众筹大文豪
+                                        span 3个小时前
+                                    .r
+                                        span.no_cirl
+                                            i.zczj.icon-zan
+                                            |(30)
+                                        span
+                                            i.zczj.icon-msg
+                    .zx_news_item
+                        .zx_itme_con.cf
+                            .l
+                                a(href="#")
+                                    span.tag 众筹
+                                    img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                            .r
+                                a(href="#").title 神烦警探
+                                .txt.
+                                    作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                .item_bar.cf
+                                    .l.cf
+                                        span.f_blue 众筹大文豪
+                                        span 3个小时前
+                                    .r
+                                        span.no_cirl
+                                            i.zczj.icon-zan
+                                            |(30)
+                                        span
+                                            i.zczj.icon-msg
+                .box_tab.plat_box.plat_items.cf
+                    dl.ml0
+                        dt
+                            span.plat_tag 融资中
+                            a(href="#")
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="", height="150", width="250")
+                        dd.plat_list_title
+                            a(href="#") 小木人实木定制
+                        dd.plat_list_txt.
+                            我们是专注全屋实木家具定制的互联网电
+                            商平台。
+                        dd.plat_list_progress
+                            ul.cf
+                                li
+                                    span.f_blue 57%
+                                    span 已达
+                                li
+                                    span.f_blue ￥894.00万元
+                                    span 已达
+                                li
+                                    span.f_blue 天使客
+                                    span 平台
+                            .plat_progress
+                                .progress
+                                    span.progress_num.cf(style="left:80%")
+                                        i.icon
+                                        span 80%
+                                    .progress_s(style="width:80%")
+                            .btns.cf
+                                a.zx_btn.l(href="#") 对比
+                                a.zx_btn.r(href="#") 关注
+                    dl
+                        dt
+                            span.plat_tag 融资中
+                            a(href="#")
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="", height="150", width="250")
+                        dd.plat_list_title
+                            a(href="#") 小木人实木定制
+                        dd.plat_list_txt.
+                            我们是专注全屋实木家具定制的互联网电
+                            商平台。
+                        dd.plat_list_progress
+                            ul.cf
+                                li
+                                    span.f_blue 57%
+                                    span 已达
+                                li
+                                    span.f_blue ￥894.00万元
+                                    span 已达
+                                li
+                                    span.f_blue 天使客
+                                    span 平台
+                            .plat_progress
+                                .progress
+                                    span.progress_num.progess_num_big.cf(style="left:90%")
+                                        i.icon
+                                        span 90%
+                                    .progress_s(style="width:90%")
+                            .btns.cf
+                                a.zx_btn.l(href="#") 对比
+                                a.zx_btn.r(href="#") 关注
+                    dl
+                        dt
+                            span.plat_tag 融资中
+                            a(href="#")
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="", height="150", width="250")
+                        dd.plat_list_title
+                            a(href="#") 小木人实木定制
+                        dd.plat_list_txt.
+                            我们是专注全屋实木家具定制的互联网电
+                            商平台。
+                        dd.plat_list_progress
+                            ul.cf
+                                li
+                                    span.f_blue 57%
+                                    span 已达
+                                li
+                                    span.f_blue ￥894.00万元
+                                    span 已达
+                                li
+                                    span.f_blue 天使客
+                                    span 平台
+                            .plat_progress
+                                .progress
+                                    span.progress_num.progess_num_big.cf(style="left:100%")
+                                        i.icon
+                                        span 100%
+                                    .progress_s(style="width:100%")
+                            .btns.cf
+                                a.zx_btn.l(href="#") 对比
+                                a.zx_btn.r(href="#") 关注
+                    dl.ml0
+                        dt
+                            span.plat_tag 融资中
+                            a(href="#")
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="", height="150", width="250")
+                        dd.plat_list_title
+                            a(href="#") 小木人实木定制
+                        dd.plat_list_txt.
+                            我们是专注全屋实木家具定制的互联网电
+                            商平台。
+                        dd.plat_list_progress
+                            ul.cf
+                                li
+                                    span.f_blue 57%
+                                    span 已达
+                                li
+                                    span.f_blue ￥894.00万元
+                                    span 已达
+                                li
+                                    span.f_blue 天使客
+                                    span 平台
+                            .plat_progress
+                                .progress
+                                    span.progress_num.cf(style="left:80%")
+                                        i.icon
+                                        span 80%
+                                    .progress_s(style="width:80%")
+                            .btns.cf
+                                a.zx_btn.l(href="#") 对比
+                                a.zx_btn.r(href="#") 关注
+                    dl
+                        dt
+                            span.plat_tag 融资中
+                            a(href="#")
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="", height="150", width="250")
+                        dd.plat_list_title
+                            a(href="#") 小木人实木定制
+                        dd.plat_list_txt.
+                            我们是专注全屋实木家具定制的互联网电
+                            商平台。
+                        dd.plat_list_progress
+                            ul.cf
+                                li
+                                    span.f_blue 57%
+                                    span 已达
+                                li
+                                    span.f_blue ￥894.00万元
+                                    span 已达
+                                li
+                                    span.f_blue 天使客
+                                    span 平台
+                            .plat_progress
+                                .progress
+                                    span.progress_num.progess_num_big.cf(style="left:90%")
+                                        i.icon
+                                        span 90%
+                                    .progress_s(style="width:90%")
+                            .btns.cf
+                                a.zx_btn.l(href="#") 对比
+                                a.zx_btn.r(href="#") 关注
+                    dl
+                        dt
+                            span.plat_tag 融资中
+                            a(href="#")
+                                img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="", height="150", width="250")
+                        dd.plat_list_title
+                            a(href="#") 小木人实木定制
+                        dd.plat_list_txt.
+                            我们是专注全屋实木家具定制的互联网电
+                            商平台。
+                        dd.plat_list_progress
+                            ul.cf
+                                li
+                                    span.f_blue 57%
+                                    span 已达
+                                li
+                                    span.f_blue ￥894.00万元
+                                    span 已达
+                                li
+                                    span.f_blue 天使客
+                                    span 平台
+                            .plat_progress
+                                .progress
+                                    span.progress_num.progess_num_big.cf(style="left:100%")
+                                        i.icon
+                                        span 100%
+                                    .progress_s(style="width:100%")
+                            .btns.cf
+                                a.zx_btn.l(href="#") 对比
+                                a.zx_btn.r(href="#") 关注
+            //左侧 end
+            //右侧
+            .plat_side.r.mt60
+                .plat_side_box.all_Show
+                    .title 大家都在看
+                    ul.con
+                        li
+                            a(href="#").img
+                                img(src="/skin/img/pt.jpg", alt="")
+                            p.plat_name
+                                a(href="#") 虾搞虾忙
+                            p 创始人：苏宁金融
+                            p 苏宁金融旗下股权众筹平台
+                        li
+                            a(href="#").img
+                                img(src="/skin/img/pt.jpg", alt="")
+                            p.plat_name
+                                a(href="#") 虾搞虾忙
+                            p 城市：深圳
+                            p 起投额：5K
+                        li
+                            a(href="#").img
+                                img(src="/skin/img/pt.jpg", alt="")
+                            p.plat_name
+                                a(href="#") 虾搞虾忙
+                            p 城市：深圳
+                            p 起投额：5K
+                        li
+                            a(href="#").img
+                                img(src="/skin/img/pt.jpg", alt="")
+                            p.plat_name
+                                a(href="#") 虾搞虾忙
+                            p 城市：深圳
+                            p 起投额：5K
+                        li
+                            a(href="#").img
+                                img(src="/skin/img/pt.jpg", alt="")
+                            p.plat_name
+                                a(href="#") 虾搞虾忙
+                            p 城市：深圳
+                            p 起投额：5K
+                    .show_more.t_center
+                        a(href="#").zc_btn.btn_blue 查看更多
+                //之家快讯
+                .plat_side_box.zjkx
+                    .title 之家快讯
+                    .con
+                        ul
+                            li
+                                a(href="#").link_t.
+                                    苏宁环球将推出城市型VR主题公园
+                                    计划
+                                p.time 刚刚
+                            li
+                                a(href="#").link_t.
+                                    苏宁环球将推出城市型VR主题公园
+                                    计划
+                                p.time 刚刚
+                            li
+                                a(href="#").link_t.
+                                    苏宁环球将推出城市型VR主题公园
+                                    计划
+                                p.time 3分钟前
+                            li
+                                a(href="#").link_t.
+                                    苏宁环球将推出城市型VR主题公园
+                                    计划
+                                p.time 刚刚
+                            li
+                                a(href="#").link_t.
+                                    苏宁环球将推出城市型VR主题公园
+                                    计划
+                                p.time 刚刚
+                        .show_more.t_center
+                            a(href="#").zc_btn.btn_blue 查看更多
+
+            //右侧 end
+    script(src="skin/plugs/comment/js/jquery.qqFace.js")
+    script(src="skin/plugs/comment/js/jquery-browser.js")
+    script(src="skin/plugs/comment/js/comment.js")
+    script.
+        $(function(){
+            $('.emotion').each(function(i,el){
+                $(el).qqFace({
+                    id : 'facebox_'+i,
+                    assign:'saytext_'+i,
+                    path:'skin/plugs/comment/arclist/' //表情存放的路径
+                })
+            })
+            //- $('.emotion').qqFace({
+            //-     id : 'facebox',
+            //-     assign:'saytext',
+            //-     path:'skin/js/comment/arclist/' //表情存放的路径
+            //- });
+            $(".btn_comment").click(function(){
+                //- var str = $("#saytext").val();
+                //- $("#show").html(replace_em(str));
+            });
+            //查看结果
+            function replace_em(str){
+                str = str.replace(/\</g,'&lt;');
+                str = str.replace(/\>/g,'&gt;');
+                str = str.replace(/\n/g,'<br/>');
+                str = str.replace(/\[em_([0-9]*)\]/g,'<img src="skin/plugs/comment/arclist/$1.gif" border="0" />');
+                return str;
+            }
+        })
+    include Shade/footer

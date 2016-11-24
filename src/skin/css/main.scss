@@ -1,0 +1,206 @@
+/*
+* @Author: suzhihui
+* @Date:   2016-09-01 16:37:36
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-09-24 19:36:22
+*/
+// @font-face {font-family: "iconfont";
+//   src: url('../fonts/iconfont.eot?t=1471931677'); /* IE9*/
+//   src: url('../fonts/iconfont.eot?t=1471931677#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//   url('../fonts/iconfont.woff?t=1471931677') format('woff'), /* chrome, firefox */
+//   url('../fonts/iconfont.ttf?t=1471931677') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+//   url('../fonts/iconfont.svg?t=1471931677#iconfont') format('svg'); /* iOS 4.1- */
+// }
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1474689053_3899844.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1474689053_3899844.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1474689053_3899844.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1474689053_3899844.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1474689053_3899844.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.zczj {
+    font-family:"iconfont" !important;
+    font-size:1rem;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale; vertical-align: middle;
+    &.icon-menu_a::before { content: "\e600"; }
+    &.icon-deng::before { content: "\e601"; }
+    &.icon-bai::before { content: "\e602"; }
+    &.icon-person::before { content: "\e603"; }
+    &.icon-data::before { content: "\e604"; }
+    &.icon-ceihua::before { content: "\e605"; }
+    &.icon-menu_b::before { content: "\e606"; }
+    &.icon-zan::before { content: "\e607"; }
+    &.icon-msg::before { content: "\e608"; }
+    &.icon-back::before { content: "\e609"; }
+    &.icon-fdj::before { content: "\e60a"; }
+    &.icon-mobile::before { content: "\e60b"; }
+
+    //个人中心图标
+    &.icon_u_mobile::before{ content:"\e60d"; }
+    &.icon_u_email::before{ content:"\e60f"; }
+    &.icon_u_user::before{ content:"\e60e"; }
+    &.icon_u_bi::before{ content:"\e60c"; }
+    &.icon_u_error::before{ content:"\e610"; }
+    &.icon_u_right::before{ content:"\e611"; }
+    &.icon_u_suc::before{ content:"\e612"; }
+    //x号
+    &.icon_cut::before{ content:"\e613"; }
+    &.icon_star::before{ content:"\e614"; }
+    &.icon_water::before{ content:"\e615"; }
+    &.icon_fujie::before{ content:"\e616"; }
+    &.icon_catgray::before{ content:"\e617"; }
+    &.icon_person::before{ content:"\e618"; }
+    &.icon_pwd::before{ content:"\e619"; }
+    &.icon_blsh::before{ content:"\e61a"; }
+    &.icon_title::before{ content:"\e61b"; }
+    //登录
+    &.icon_sina::before{ content:'\e61c'}
+    &.icon_qq::before{ content:'\e61d'}
+    &.icon_baidu::before{ content:'\e61e'}
+    &.icon_rr::before{ content:'\e61f'}
+
+    &.icon-ice::before {content:'\e620'}
+}
+/*
+文字颜色
+ */
+.f_red{color: #f63737;}
+.f_green{color: #65b770;}
+.f_orange{color: #fe8200;}
+.f_blue{color: #0c7efe;}
+.f_purple{color: #9b75fb;}
+.f_yellow{color: #ffc000;}
+
+/*
+style
+ */
+.mt10{margin-top: 10px;}
+.mt0{margin-top: 0;}
+.mt10{ margin-top: 10px; }
+.mt15{ margin-top: 15px; }
+.mt20{margin-top: 20px;}
+.mt30{margin-top: 30px;}
+.mt40{margin-top: 40px;}
+.mt60{margin-top: 60px;}
+
+.ml10{margin-left: 10px;}
+.mb40{ margin-bottom: 40px;}
+.t_center{
+    text-align: center;
+}
+
+/*
+按钮
+ */
+.zx_btn{
+    display: inline-block; opacity:0.8;filter: alpha(opacity=80);
+    &:hover{
+        opacity:1; filter:alpha(opacity=100);
+    }
+    &.btn_blue{ color: #3574f7;  border:1px #3574f7 solid; height: 30px;line-height: 30px; padding: 0 30px; border-radius: 5px;}
+}
+
+.ui_btn{height: 30px; line-height: 30px; padding: 0 20px; font-size: 14px; color: #fff; background: #3e85ff; display: inline-block; border-radius: 4px; box-shadow: 0px 0.1em 3px #3067c6, 0px 0.3em 1px #3067c6; cursor: pointer;
+  &.ui_btn_blue{}
+  &:active,&:hover{text-decoration: none; box-shadow: none; color: #fff;}
+}
+
+
+
+/*翻页*/
+.black2 {
+  width: 100%;
+  margin: 30px 0; height: 30px; line-height: 30px;
+  text-align: center; clear: both }
+
+.black2 a {
+  padding: 3px 10px;
+  margin: 0px 5px;
+  border: #ccc 1px solid;
+  border-radius: 3px;
+  color: #666; }
+
+.black2 a:hover {
+  border: #cbeaf8 1px solid;
+  background-color: #34a8f3;
+  color: #fff;
+  text-decoration: none; }
+
+.black2 a:active {
+  color: #fff;
+  border: #7f7f80 1px solid;
+  background-color: #939494; }
+
+.black2 span.sp-cur {
+  padding: 3px 10px;
+  border: #cbeaf8 1px solid;
+  font-weight: normal;
+  margin: 0px 5px;
+  color: #fff;
+  background-color: #34a8f3;
+  border-radius: 2px;
+  cursor: pointer; }
+
+.black2 span.disabled {
+  padding-right: 3px;
+  padding-left: 3px;
+  padding-bottom: 2px;
+  margin: 2px;
+  border: #ADADAD 1px solid;
+  color: #ADADAD;
+  padding-top: 2px; }
+
+  .box_tab{
+    display: none;
+  }
+
+#scrollBar{ width: 51px; position: fixed; right: 10px; bottom: 100px; z-index: 9999;
+  a{ display: block; width: 51px; height: 51px; background-image: url(../img/toolBar.png); margin-bottom: 4px; background-repeat: no-repeat;
+    &:hover{
+      opacity: 0.9;
+    }
+    &.wxCode{
+      background-position: 0 0px; position: relative;
+      .wxCodeBox{display: block; position: absolute; width: 0; height: 0; bottom: 0; overflow: hidden; opacity: 0; left: 0; border: 10px #EDF1F2 solid; background: #fff; border-radius: 5px;
+        img{ width: 100%;}
+      }
+    }
+    &.down_app{
+      background-position: 0 -54px;
+    }
+    &.goTopBtn{
+      background-position: 0 -108px;
+    }
+    &.zxkf{
+      background-position: 0 -162px;
+    }
+  }
+}

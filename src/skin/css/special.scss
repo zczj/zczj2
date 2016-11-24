@@ -1,0 +1,126 @@
+/*
+* @Author: Administrator
+* @Date:   2016-09-14 15:23:36
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-09-18 14:39:35
+*/
+.page_warp{
+    min-height: auto;
+}
+//平台寻求报道
+.spc_banner{
+    height: 500px; background-position: center top; background-repeat: no-repeat; background-size: cover;
+}
+.spc_box{
+    margin-top: 50px; color: #616a73;
+    .title{ text-align: center; font-size: 24px; font-weight: bold;
+        .blue{
+            color: #3e85ff;
+        }
+    }
+    .spc_con{margin-top: 30px;}
+    &.spc_swhz{
+        .spc_con{
+            padding: 0 280px; line-height: 1.4; font-size: 16px;
+            b{ font-weight: bold;}
+        }
+    }
+    &.spec_form{margin-top: 40px;
+        .spec_form_box{
+            width: 810px; margin: 0 auto; margin-bottom: 80px;
+            li{
+                position: relative; margin-top: 20px;
+                padding-left: 140px; line-height: 30px; color: #616a73;
+                .spec_form_t{
+                    position: absolute; left: 0; top: 0; display: inline-block; height: 30px; line-height: 30px; text-align: right; width: 130px;
+                    .red{
+                        color: red;
+                    }
+                }
+                .spec_txt{width:668px; height: 30px; line-height: 30px; border: 1px #dcdcdc solid;text-indent: 4px;}
+                textarea.spec_txt{
+                    height: 120px;
+                }
+                .fileupload{ font-size: 14px;}
+                &.subBtn{
+                    margin-top: 50px;
+                    input{
+                        font-size:20px; font-weight: bold; color: #fff; background:#3e85ff; width: 166px; height: 48px; line-height: 48px; border: none;
+                        border-radius: 4px; box-shadow: 0px 0.1em 3px #2e63be, 0px 0.3em 1px #2e63be;  cursor: pointer;
+                        &:active{box-shadow: none;}
+                    }
+                }
+            }
+        }
+    }
+    &.spc_zm_note{
+        padding: 0 180px; font-size: 16px; color: #616a73; line-height: 1.5;
+        p{
+            padding:  10px 0;
+        }
+    }
+    //投稿
+    &.spc_box_contr{
+        width: 850px; margin: 20px auto 40px; font-size: 14px;
+        .zczj{color: #3574f7; font-size: 20px; margin: 0 3px 0 6px; line-height: 34px;
+                &::before{
+                     vertical-align: middle;
+                }
+            }
+        .contr_inp{
+            border: 1px #e8e8e8 solid; height: 34px; line-height: 34px; position: relative; width: 848px; margin-top: 30px; vertical-align: middle; display: inline-block;
+            input.txt{
+                width: 800px; border: none;  border-left: 1px #e8e8e8 solid;text-indent:10px;
+            }
+            &.halfW{width: 400px;
+                .txt{
+                    width: 350px;
+                }
+            }
+            &.nobd{border: none;}
+
+            label{
+                input{
+                    vertical-align: middle; margin-top: -2px; margin-right: 4px;
+                }
+            }
+        }
+        .contr_item{
+            img{
+                width: 100%; height: 520px;
+            }
+            &.add_fj{
+                position: relative;
+                .add_fj_btn{
+                    display: inline-block;
+                }
+                .add_fj_input{
+                    position: absolute; left: 0; top: 2px; opacity:0; cursor: pointer;
+                }
+            }
+            &.contr_nurl{
+                height: 30px; line-height: 30px; color: #434343;
+                label{
+                    input{vertical-align: middle;margin-top: -2px; margin-right: 4px;}
+                    a{
+                        &:hover{
+                            color: #0c7efe; text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            &.contr_sub_btn{
+                input{
+                    width: 305px; height: 50px;line-height: 50px; text-align: center; background:#3574f7; border: 1px #a1befb solid; color: #fff; border-radius: 5px; font-size: 18px;
+                }
+            }
+            &.error{
+                height: 30px; line-height: 30px;
+            }
+        }
+    }
+}
+
+.spc_gray_bg{
+    background:#f1f1f1;
+}

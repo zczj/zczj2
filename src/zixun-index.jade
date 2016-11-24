@@ -1,0 +1,384 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/zixun.min.css")
+    .bg_white
+        .page_warp
+            .contanier.cf
+                //顶部banner区域
+                .top_banner_area.cf
+                    //轮播图
+                    .l.bannerSlider
+                        .slider-content(style="left:0;")
+                            ul.slider-content(style="left:0;")
+                                li
+                                    a(href="#",title="",rel="nofollow")
+                                        img(src="https://pic.36krcnd.com/avatar/201608/31072650/6fy16305w9hk98o5.jpg", alt="",width="652",height="368")
+                                        p.silder_txt 被称为股权众筹最成功的项目 如今被爆出严重的数--苏智慧
+                                        .mark
+                                li
+                                    a(href="#",title="",rel="nofollow")
+                                        img(src="https://pic.36krcnd.com/avatar/201608/31072650/6fy16305w9hk98o5.jpg", alt="",width="652",height="368")
+                                        p.silder_txt 被称为股权众筹最成功的项目 如今被爆出严重的数据造假
+                                        .mark
+                                li
+                                    a(href="#",title="",rel="nofollow")
+                                        img(src="https://pic.36krcnd.com/avatar/201608/31072650/6fy16305w9hk98o5.jpg", alt="",width="652",height="368")
+                                        p.silder_txt 被称为股权众筹最成功的项目 如今被爆出严重的数据造假
+                                        .mark
+                        .slider-ctrl
+                            .ctrl-dot#btn
+                    ul.r.zc_banner_list
+                        li
+                            a(href="#",style="background-image:url(https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg);")
+                                span.banner_list-t 热门专题
+                                .mask
+                        li
+                            a(href="#",style="background-image:url(https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg);")
+                                span.banner_list-t 热门专题
+                                .mask
+                        li
+                            a(href="#",style="background-image:url(https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg);")
+                                span.banner_list-t 热门专题
+                                .mask
+                //左右布局
+                .cf.mt20
+                    //右侧
+                    .zx_side.zx_side_294.bg_white.r
+                        .zx_side_box.four_btns
+                            a.ui_btn(href="#") 投稿
+                            a.ui_btn.ml10(href="#") 成为专栏作家
+                            a.ui_btn.mt10(href="#") 创业者寻求报道
+                            a.ui_btn.mt10.ml10(href="#") 平台寻求报道
+                        .zx_side_box.zx_side_top10.mt20.cf
+                            .zx_s_t TOP10
+                            .sort_bar
+                                a(href="#").cur 日排行
+                                a(href="") 周排行
+                            ul
+                                li.cf
+                                    a.sort_t(href="#") 购房需警惕!地产众筹真正目的 购房需警惕!地产众筹真正目的
+                                    .sort_status.cf
+                                        span.l 5分钟前
+                                        span.r 4500
+                                li.cf
+                                    a.sort_t(href="#") 购房需警惕!地产众筹真正目的
+                                    .sort_status.cf
+                                        span.l 5分钟前
+                                        span.r 4500
+                                li.cf
+                                    a.sort_t(href="#") 购房需警惕!地产众筹真正目的
+                                    .sort_status.cf
+                                        span.l 5分钟前
+                                        span.r 4500
+                                li.cf
+                                    a.sort_t(href="#") 购房需警惕!地产众筹真正目的
+                                    .sort_status.cf
+                                        span.l 5分钟前
+                                        span.r 4500
+                                li.cf
+                                    a.sort_t(href="#") 购房需警惕!地产众筹真正目的
+                                    .sort_status.cf
+                                        span.l 5分钟前
+                                        span.r 4500
+                            .show_more.t_center
+                                a(href="#").zx_btn.btn_blue 查看更多
+                        //名家推荐
+                        .zx_side_box.zx_side_mjtj.mt20
+                            .zx_s_t 名家推荐
+                            ul
+                                li.cf
+                                    img.l(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//avatar/20160716/20160716105125.jpg", alt="")
+                                    p.user_name 宋欢平
+                                    p.text.
+                                        创投新兵，华侨跃梦天使基金的合伙人
+                                li.cf
+                                    img.l(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//avatar/20160716/20160716105125.jpg", alt="")
+                                    p.user_name 宋欢平
+                                    p.text.
+                                        创投新兵，华侨跃梦天使基金的合伙人
+                                li.cf
+                                    img.l(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//avatar/20160716/20160716105125.jpg", alt="")
+                                    p.user_name 宋欢平
+                                    p.text.
+                                        创投新兵，华侨跃梦天使基金的合伙人
+
+                    //左侧
+                    .zx_main.zx_main_754.l
+                        //资讯tab切换
+                        .new_box_t.btn_tab
+                            a(href="#").cur 全部
+                            a(href="#") 众筹
+                            a(href="#") 政策
+                            a(href="#") 国际
+                            a(href="#") 研究
+                            a(href="#") 创业
+                        .box_tab.zx_items(style="display:block;")
+                            .zx_news_item
+                                //-
+                                    h1.zx_item_t
+                                        span.zx_tag.zx_tag_sd 深度
+                                        a(href="#") 【教程】众筹项目发起人该如何保护知识产权？
+                                .zx_itme_con.cf
+                                    .l
+                                        a(href="#")
+                                            span.tag 众筹
+                                            img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                                    .r
+                                        a(href="#").title 神烦警探
+                                        .txt.
+                                            作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                        .item_bar.cf
+                                            .l.cf
+                                                span.f_blue 众筹大文豪
+                                                span 3个小时前
+                                            .r
+                                                span.no_cirl
+                                                    i.zczj.icon-zan
+                                                    |(30)
+                                                span
+                                                    i.zczj.icon-msg
+                            .zx_news_item
+                                .zx_itme_con.cf
+                                    .l
+                                        a(href="#")
+                                            span.tag 众筹
+                                            img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                                    .r
+                                        a(href="#").title 神烦警探
+                                        .txt.
+                                            作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                        .item_bar.cf
+                                            .l.cf
+                                                span.f_blue 众筹大文豪
+                                                span 3个小时前
+                                            .r
+                                                span.no_cirl
+                                                    i.zczj.icon-zan
+                                                    |(30)
+                                                span
+                                                    i.zczj.icon-msg
+                            .zx_news_item
+                                .zx_itme_con.cf
+                                    .l
+                                        a(href="#")
+                                            span.tag 众筹
+                                            img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                                    .r
+                                        a(href="#").title 神烦警探
+                                        .txt.
+                                            作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                        .item_bar.cf
+                                            .l.cf
+                                                span.f_blue 众筹大文豪
+                                                span 3个小时前
+                                            .r
+                                                span.no_cirl
+                                                    i.zczj.icon-zan
+                                                    |(30)
+                                                span
+                                                    i.zczj.icon-msg
+                            .zx_news_item
+                                .zx_itme_con.cf
+                                    .l
+                                        a(href="#")
+                                            span.tag 众筹
+                                            img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                                    .r
+                                        a(href="#").title 神烦警探
+                                        .txt.
+                                            作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                        .item_bar.cf
+                                            .l.cf
+                                                span.f_blue 众筹大文豪
+                                                span 3个小时前
+                                            .r
+                                                span.no_cirl
+                                                    i.zczj.icon-zan
+                                                    |(30)
+                                                span
+                                                    i.zczj.icon-msg
+                            dl.lightBox_item
+                                a.title(href="#") 读数|汽车众筹热背后的冷思考
+                                .text.
+                                    汽车众筹始于2015年，经过将近1年默默无闻的时间，2016年，特别是6月份以来，突然迎来爆发突然迎来爆发性增长，引得
+                                    广泛关注。
+                                ul.light_img.cf
+                                    li.ml0
+                                        span.tag 研究
+                                        img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+                                    li
+                                        span.tag 研究
+                                        img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+                                    li
+                                        span.tag 研究
+                                        img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                                .item_bar.cf
+                                    .l.cf
+                                        span.f_blue 众筹大文豪
+                                        span 3个小时前
+                                    .r
+                                        span.no_cirl
+                                            i.zczj.icon-zan
+                                            |(30)
+                                        span
+                                            i.zczj.icon-msg
+                            ul.zx_news_minBrand.cf
+                                li.ml0
+                                    a(href="#")
+                                        img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+                                        span.text.
+                                            物权众筹连发两起负面 盘点各类型众
+                                            筹风险
+                                        span.mask_layer
+
+                                li
+                                    a(href="#")
+                                        img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+                                        span.text.
+                                            物权众筹连发两起负面 盘点各类型众
+                                            筹风险
+                                        span.mask_layer
+                        .box_tab.zx_items
+                            .zx_news_item
+                                //-
+                                    h1.zx_item_t
+                                        span.zx_tag.zx_tag_sd 深度
+                                        a(href="#") 【教程】众筹项目发起人该如何保护知识产权？
+                                .zx_itme_con.cf
+                                    .l
+                                        a(href="#")
+                                            span.tag 众筹
+                                            img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                                    .r
+                                        a(href="#").title 神烦警探
+                                        .txt.
+                                            作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                        .item_bar.cf
+                                            .l.cf
+                                                span.f_blue 众筹大文豪
+                                                span 3个小时前
+                                            .r
+                                                span.no_cirl
+                                                    i.zczj.icon-zan
+                                                    |(30)
+                                                span
+                                                    i.zczj.icon-msg
+                        .box_tab.zx_items
+                            .zx_news_item
+                                //-
+                                    h1.zx_item_t
+                                        span.zx_tag.zx_tag_sd 深度
+                                        a(href="#") 【教程】众筹项目发起人该如何保护知识产权？
+                                .zx_itme_con.cf
+                                    .l
+                                        a(href="#")
+                                            span.tag 政策
+                                            img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                                    .r
+                                        a(href="#").title 神烦警探
+                                        .txt.
+                                            作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                        .item_bar.cf
+                                            .l.cf
+                                                span.f_blue 众筹大文豪
+                                                span 3个小时前
+                                            .r
+                                                span.no_cirl
+                                                    i.zczj.icon-zan
+                                                    |(30)
+                                                span
+                                                    i.zczj.icon-msg
+                        .box_tab.zx_items
+                            .zx_news_item
+                                //-
+                                    h1.zx_item_t
+                                        span.zx_tag.zx_tag_sd 深度
+                                        a(href="#") 【教程】众筹项目发起人该如何保护知识产权？
+                                .zx_itme_con.cf
+                                    .l
+                                        a(href="#")
+                                            span.tag 国际
+                                            img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                                    .r
+                                        a(href="#").title 神烦警探
+                                        .txt.
+                                            作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                        .item_bar.cf
+                                            .l.cf
+                                                span.f_blue 众筹大文豪
+                                                span 3个小时前
+                                            .r
+                                                span.no_cirl
+                                                    i.zczj.icon-zan
+                                                    |(30)
+                                                span
+                                                    i.zczj.icon-msg
+                        .box_tab.zx_items
+                            .zx_news_item
+                                //-
+                                    h1.zx_item_t
+                                        span.zx_tag.zx_tag_sd 深度
+                                        a(href="#") 【教程】众筹项目发起人该如何保护知识产权？
+                                .zx_itme_con.cf
+                                    .l
+                                        a(href="#")
+                                            span.tag 研究
+                                            img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                                    .r
+                                        a(href="#").title 神烦警探
+                                        .txt.
+                                            作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                        .item_bar.cf
+                                            .l.cf
+                                                span.f_blue 众筹大文豪
+                                                span 3个小时前
+                                            .r
+                                                span.no_cirl
+                                                    i.zczj.icon-zan
+                                                    |(30)
+                                                span
+                                                    i.zczj.icon-msg
+                        .box_tab.zx_items
+                            .zx_news_item
+                                //-
+                                    h1.zx_item_t
+                                        span.zx_tag.zx_tag_sd 深度
+                                        a(href="#") 【教程】众筹项目发起人该如何保护知识产权？
+                                .zx_itme_con.cf
+                                    .l
+                                        a(href="#")
+                                            span.tag 创业
+                                            img(src="https://zczj01.oss-cn-shenzhen.aliyuncs.com//counseling/20160902/20160902175126.jpg", alt="")
+
+                                    .r
+                                        a(href="#").title 神烦警探
+                                        .txt.
+                                            作为互联网金融时代重要的融资方式之一，众筹在我国备受关注。众筹融资为创业者和投资者都提供了便利，但也存在一定的风险。其中，知识产权风险尤其需要防范。众筹项目多是创意类、个性化项目，是创意者的智慧结晶。
+                                        .item_bar.cf
+                                            .l.cf
+                                                span.f_blue 众筹大文豪
+                                                span 3个小时前
+                                            .r
+                                                span.no_cirl
+                                                    i.zczj.icon-zan
+                                                    |(30)
+                                                span
+                                                    i.zczj.icon-msg
+                            //-翻页
+                            <div class="black2"><span class="sp-cur">1</span><a href="#"><span>2</span></a><a href="#"><span>3</span></a><a href="#"><span>4</span></a><a href="#"><span>5</span></a><a href="#"><span>6</span></a><a href="#"><span>7</span></a><a href="#"><span>8</span></a><a href="#"><span>9</span></a><a href="#)"><span>10</span></a><a href="#">»</a></div>
+
+
+    script(src="skin/plugs/slide/slide.js")
+    script.
+        var sl = new Sld();
+            sl.init('bannerSlider', { resize: false });
+

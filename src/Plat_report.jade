@@ -1,0 +1,26 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/special.min.css")
+    .bg_white
+        .spc_banner(style="background-image:url(skin/img/spec/report_banner.jpg")
+        .page_warp.mb40
+            //众筹之家的优势
+            .spc_box.spc_ys
+                h1.title
+                    |众筹之家的
+                    span.blue 优势
+                .spc_con.t_center
+                    img(src="skin/img/spec/spec.jpg", alt="")
+            //商务合作
+            .spc_box.spc_swhz
+                h1.title 商务合作
+                .spc_con
+                    p.
+                        请将需求直接邮件至
+                        <b>service@zczj.com</b> 、 <b>huangmiaoyu@zczj.com</b>
+                    p.
+                        联系人：微信号<b>mavis（QQ 510729808 ）</b> 或拨打电话：<b>0755-82557958</b>
+
+
+
+    include Shade/footer

@@ -1,0 +1,56 @@
+extends Shade/layout
+block content
+    link(rel="stylesheet", href="skin/css/special.min.css")
+    .bg_white
+        .page_warp.mb40
+            //投稿
+            .spc_box.spc_box_contr
+                .contr_form
+                    .contr_item
+                        .contr_inp
+                            i.zczj.icon_title
+                            input.txt(type="text",placeholder="请输入您的标题")
+                    .contr_item.cf
+                        .contr_inp.halfW.l
+                            i.zczj.icon_person
+                            input.txt(type="text",placeholder="请输入您的姓名")
+                        .contr_inp.halfW.r
+                            i.zczj.icon-mobile
+                            input.txt(type="text",placeholder="请输入您的手机号")
+                    .contr_item.cf
+                        .contr_inp.halfW.l
+                            i.zczj.icon_catgray
+                            input.txt(type="text",placeholder="请选择文章类型")
+                        .contr_inp.halfW.r.nobd
+                            label
+                                input(type="checkbox")
+                                span 众筹之家首发
+                    //文本编辑区
+                    .contr_item.mt20
+                        img(src="skin/img/test.jpg", alt="")
+                    //添加附件
+                    .contr_item.add_fj
+                        .add_fj_btn
+                            i.zczj.icon_fujie
+                            span 添加附件
+                        input.add_fj_input(type="file")
+                    .contr_item.contr_nurl.t_center
+                        label
+                            input(type="checkbox")
+                            span
+                                |同意众筹之家
+                                a(href="#").f_blue 投稿准则
+                                |，一旦文章投稿审核就不能修改
+                    .contr_item.error.f_red.t_center 错误提示
+                    .contr_item.contr_sub_btn.t_center
+                        input(type="submit",value="提交审核").zx_btn
+
+
+
+
+
+
+
+
+
+    include Shade/footer
