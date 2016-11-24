@@ -37,7 +37,7 @@ gulp.task('styles', function() {
     //.pipe(gulp.dest('dist/skin/css'))
     .pipe(rename({ suffix: '.min' }))
     // .pipe(minifycss())
-    .pipe(gulp.dest('dist/skin/css'))
+    .pipe(gulp.dest('skin/css'))
     // .pipe(notify({ message: 'Styles task complete' }));
 });
 
@@ -50,43 +50,43 @@ gulp.task('scripts', function() {
     // .pipe(gulp.dest('dist/skin/js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/skin/js'))
+    .pipe(gulp.dest('skin/js'))
     // .pipe(notify({ message: 'Scripts task complete' }));
 });
 
 
 //移到第三方
-gulp.task('plugs',function () {
-  return gulp.src(['src/skin/plugs/*','src/skin/plugs/**/*'])
-    .pipe(gulp.dest('dist/skin/plugs'))
-    // .pipe(notify({ message: 'Copy task complete' }));
-})
+// gulp.task('plugs',function () {
+//   return gulp.src(['src/skin/plugs/*','src/skin/plugs/**/*'])
+//     .pipe(gulp.dest('dist/skin/plugs'))
+//     // .pipe(notify({ message: 'Copy task complete' }));
+// })
 
 //移动data模拟数据文件夹
-gulp.task('data',function () {
+/*gulp.task('data',function () {
   return gulp.src('src/data/*')
     .pipe(gulp.dest('dist/data'))
-})
+})*/
 
 // 图片
-gulp.task('images', function() {
-  return gulp.src(['src/skin/img/*','src/skin/img/**/*'])
-    // .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('dist/skin/img'))
-    // .pipe(notify({ message: 'Images task complete' }));
-});
+// gulp.task('images', function() {
+//   return gulp.src(['src/skin/img/*','src/skin/img/**/*'])
+//     // .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+//     .pipe(gulp.dest('dist/skin/img'))
+//     // .pipe(notify({ message: 'Images task complete' }));
+// });
 
 //字体
-gulp.task('font',function () {
+/*gulp.task('font',function () {
   return gulp.src(['src/skin/fonts/*'])
     .pipe(gulp.dest('dist/skin/fonts'))
-})
+})*/
 
-gulp.task('jade',function () {
+/*gulp.task('jade',function () {
   return gulp.src('src/*.jade')
     .pipe(jade({pretty: true}))
     .pipe(gulp.dest('dist'))
-});
+});*/
 
 // 清理
 gulp.task('clean', function() {
@@ -96,7 +96,7 @@ gulp.task('clean', function() {
 
 // 预设任务
 gulp.task('default', ['clean'], function() {
-    gulp.start('styles', 'scripts', 'images','plugs','jade','font','data');
+    gulp.start('styles', 'scripts');
 });
 
 gulp.task('serve',function () {
@@ -105,11 +105,11 @@ gulp.task('serve',function () {
       baseDir:'dist/'
     }
   });
-  gulp.watch('src/data/*',['data'])
+  ///gulp.watch('src/data/*',['data'])
   gulp.watch('src/skin/css/*.scss',['styles']);
-  gulp.watch(['src/*.jade','src/Shade/*.jade'],['jade']);
+  //gulp.watch(['src/*.jade','src/Shade/*.jade'],['jade']);
   gulp.watch('src/skin/js/*.js',['scripts']);
-  gulp.watch(['src/skin/img/*','src/skin/img/**/*'],['images']);
+  //gulp.watch(['src/skin/img/*','src/skin/img/**/*'],['images']);
   gulp.watch("*").on('change',browserSync.reload);
 });
 
