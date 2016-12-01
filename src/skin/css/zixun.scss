@@ -410,7 +410,11 @@
     .btn_back{ font-size: 18px; color:#fff; position: absolute; left: 20px; top: 20px;}
     @at-root{
         .news_detail{
-            // padding-top: 400px;
+            &.zl{
+
+                padding-top: 400px;
+            }
+
             .l_news{ width:840px; min-height: 400px;
                 .news_detail_box{
                     background:#fff; margin-top: 20px;

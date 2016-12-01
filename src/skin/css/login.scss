@@ -1,8 +1,8 @@
 /*
 * @Author: Administrator
 * @Date:   2016-09-10 16:07:38
-* @Last Modified by:   Administrator
-* @Last Modified time: 2016-09-23 17:24:14
+* @Last Modified by:   老苏
+* @Last Modified time: 2016-12-01 11:48:00
 */
 .bg_white{padding-top: 40px; min-height: auto;}
 .bg_login{
@@ -29,7 +29,28 @@
     .login_side{
         width: 345px; height: 100%;
     }
-    .login_t{ border-bottom: 1px #13151b solid; height: 66px; line-height: 66px; font-size:20px; text-align: center; color: #fff; }
+    .login_t{ border-bottom: 1px #13151b solid; height: 66px; line-height: 66px; font-size:20px; text-align: center; color: #fff;
+        .login-btn{
+            display: inline-block;
+            width: 150px;
+            height: 100%;
+            text-align: center; position: relative;
+            color: #fff;
+            margin: 0 20px;
+            &.cur,&:hover{
+                &::after{
+                    display: inline-block;
+                    height: 0;
+                    content: '';
+                    border-bottom: 2px #0068b7 solid;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
 
     //注册
     .reg_box{
@@ -106,7 +127,7 @@
 //登录
 
 .tab_login{
-    height: 30px; line-height: 30px; width: 360px; margin: 0 auto;margin-top: 40px; font-size: 18px;
+    height: 30px; line-height: 30px; width: 360px; margin: 0 auto;margin-top: 40px; font-size: 18px; color: #fff;
     input{ width: 22px; height: 22px; vertical-align: middle; margin-right: 4px;
     }
 }
@@ -121,7 +142,7 @@
             }
         }
         .getCodeBtn{ width: 120px; overflow: hidden; height: 100%; background:#2398e6; font-size: 16px; color: #fff; display: inline-block; top: 0; right: -2px; position: absolute;}
-        &.login_error{ height:24px; line-height: 24px;}
+        &.login_error{ height:24px; line-height: 24px; margin-top: 0;}
         &.getCode_li{
             input{
                  width: 230px;
@@ -139,7 +160,7 @@
         &.login_bnt_li{ margin-top: 4px;}
         .login_btn{ width: 100%;}
         &.login_tips{
-            text-align: left; font-size: 16px;
+            text-align: left; font-size: 16px; color: #fff;
             a{color: #68cdff;&:hover{text-decoration: underline;}}
         }
          &.note{

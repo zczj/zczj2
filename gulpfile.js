@@ -28,7 +28,7 @@ var gulp = require('gulp'),
 // 样式
 gulp.task('styles', function() {
   return gulp.src(['src/skin/css/*.scss','bower_components/normalize-css/*.css'])
-    .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions', 'Android >= 4.0'],
       cascade: true,
@@ -102,7 +102,7 @@ gulp.task('default', ['clean'], function() {
 gulp.task('serve',function () {
   browserSync.init({
     server:{
-      baseDir:'dist/'
+      baseDir:'./'
     }
   });
   ///gulp.watch('src/data/*',['data'])
